@@ -33,6 +33,7 @@
 <script src='/js/loadimage7d0b.js?v=140' type='text/javascript'></script>
 <script src='/js/jquery.countdown.min7d0b.js?v=140' type='text/javascript'></script>
 <script src='/js/main7d0b.js?v=140' type='text/javascript'></script>
+@yield('contentJS_End')
 </body>
 
 </html>

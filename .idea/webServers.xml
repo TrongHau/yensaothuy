@@ -10,6 +10,14 @@
           <option name="port" value="2018" />
         </fileTransfer>
       </webServer>
+      <webServer id="de5f39ed-b499-4328-80d6-de34cfe8e63d" name="v-online" url="http://45.118.148.50">
+        <fileTransfer host="45.118.148.50" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

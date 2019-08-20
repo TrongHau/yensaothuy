@@ -2041,7 +2041,7 @@ use Jenssegers\Agent\Agent;
                 <div class="modal-body">
                     <div class="container-fluid">
                         <div class="row">
-                            <form method="post" action="https://vegetables-tmt.myharavan.com/cart/add">
+                            <form method="post" action="/">
                                 <div class="col-lg-5 col-md-6">
                                     <div class="image-zoom row">
 

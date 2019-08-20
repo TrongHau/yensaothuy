@@ -7,11 +7,7 @@ var stFilter = window.stFilter || {};
 			this.changeView();
 		},
 		ajaxClickInputFilter: function(){
-			$(document).on('click','.check-box-list li > input',function(){
-				jQuery(this).parent().toggleClass('active');
-				var _url = stFilter.ajaxGetFilterQuery() + '&view=filter&page=1';
-				stFilter.ajaxRenderHTML(_url);
-			})
+
 			$(document).on('click','.content_sortPagiBar.pagiFilter li a', function(e){
 				e.preventDefault();
 				stFilter.ajaxRenderHTML($(this).attr('href'))
@@ -27,18 +23,12 @@ var stFilter = window.stFilter || {};
 			var _str = '/search?q=filter=';
 			_query = "("+_id+")";
 
-			jQuery('.filter-price ul.check-box-list li.active').each(function(){
-				_price = _price + jQuery(this).find('input').data('price') + '||';
-			})
 			_price=_price.substring(0,_price.length -2);
 			if(_price != ""){
 				_price='('+_price+')';
 				_query+='&&'+_price;
 			}
 
-			jQuery('.filter-brand ul.check-box-list li.active').each(function(){
-				_vendor = _vendor + jQuery(this).find('input').data('vendor') + '||';
-			})
 			_vendor=_vendor.substring(0,_vendor.length -2);
 			if(_vendor != ""){
 				_vendor='('+_vendor+')';
