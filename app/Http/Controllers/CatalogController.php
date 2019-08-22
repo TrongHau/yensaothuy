@@ -5,21 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Library\Helpers;
-use App\Library\UploadHandler;
-use Illuminate\Support\Facades\Auth;
-use  App\Models\DistrictModel;
-use  App\Models\ProvinceModel;
-use  App\Models\StreetModel;
-use  App\Models\WardModel;
-use  App\Models\CategoryModel;
-use Illuminate\Support\Facades\Hash;
-use  App\User;
-use App\Models\ArticleForLeaseModel;
-use App\Models\ArticleForBuyModel;
-use App\Models\TypeModel;
-use App\Models\ArticleModel;
+use Backpack\PageManager\app\Models\Page;
 use Backpack\NewsCRUD\app\Models\Article;
-use App\Models\ArticleTagModel;
 
 class CatalogController extends Controller
 {
@@ -40,5 +27,21 @@ class CatalogController extends Controller
      */
     public function index(Request $request, $slug) {
         return view('catalog.index');
+    }
+    public function gioi_thieu() {
+        $page = Page::where('id', 2)->first();
+        return view('catalog.page', compact('page'));
+    }
+    public function chinh_sach_doi_tra() {
+        $page = Page::where('id', 3)->first();
+        return view('catalog.page', compact('page'));
+    }
+    public function dieu_khoan_dich_vu() {
+        $page = Page::where('id', 4)->first();
+        return view('catalog.page', compact('page'));
+    }
+    public function huong_dan_mua_hang() {
+        $page = Page::where('id', 5)->first();
+        return view('catalog.page', compact('page'));
     }
 }

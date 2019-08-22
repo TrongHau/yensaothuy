@@ -57,7 +57,7 @@ class ArticleCrudController extends CrudController
         ]);
         $this->crud->addColumn([
             'name' => 'title',
-            'label' => 'Title',
+            'label' => 'Tên Sản Phẩm',
         ]);
         $this->crud->addColumn([
             'name' => 'featured',
@@ -76,9 +76,9 @@ class ArticleCrudController extends CrudController
         // ------ CRUD FIELDS
         $this->crud->addField([    // TEXT
             'name' => 'title',
-            'label' => 'Title',
+            'label' => 'Tên Sản Phẩm',
             'type' => 'text',
-            'placeholder' => 'Your title here',
+            'placeholder' => 'Nhập tên sản phẩm',
         ]);
         $this->crud->addField([
             'name' => 'slug',
@@ -88,18 +88,18 @@ class ArticleCrudController extends CrudController
             // 'disabled' => 'disabled'
         ]);
 
-        $this->crud->addField([    // TEXT
-            'name' => 'date',
-            'label' => 'Date',
-            'type' => 'date',
-            'value' => date('Y-m-d'),
-        ], 'create');
-        $this->crud->addField([    // TEXT
-            'name' => 'short_content',
-            'label' => 'Nội dung ngắn',
-            'type' => 'textarea',
-            'placeholder' => 'Your title here',
-        ]);
+//        $this->crud->addField([    // TEXT
+//            'name' => 'date',
+//            'label' => 'Date',
+//            'type' => 'date',
+//            'value' => date('Y-m-d'),
+//        ], 'create');
+//        $this->crud->addField([    // TEXT
+//            'name' => 'short_content',
+//            'label' => 'Nội dung ngắn',
+//            'type' => 'textarea',
+//            'placeholder' => 'Your title here',
+//        ]);
 
         $this->crud->addField([    // WYSIWYG
             'name' => 'content',
@@ -107,31 +107,28 @@ class ArticleCrudController extends CrudController
             'type' => 'ckeditor',
             'placeholder' => 'Your textarea text here',
         ]);
-        $this->crud->addField([    // Image
-            'name' => 'image',
-            'label' => 'Image',
-            'type' => 'browse',
-        ]);
+
+
         $this->crud->addField([    // SELECT
-            'label' => 'Category',
+            'label' => 'Danh Mục',
             'type' => 'select2',
             'name' => 'category_id',
             'entity' => 'category',
             'attribute' => 'name',
             'model' => "Backpack\NewsCRUD\app\Models\Category",
         ]);
-        $this->crud->addField([       // Select2Multiple = n-n relationship (with pivot table)
-            'label' => 'Tags',
-            'type' => 'select2_multiple',
-            'name' => 'tags', // the method that defines the relationship in your Model
-            'entity' => 'tags', // the method that defines the relationship in your Model
-            'attribute' => 'name', // foreign key attribute that is shown to user
-            'model' => "Backpack\NewsCRUD\app\Models\Tag", // foreign key model
-            'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
-        ]);
+//        $this->crud->addField([       // Select2Multiple = n-n relationship (with pivot table)
+//            'label' => 'Tags',
+//            'type' => 'select2_multiple',
+//            'name' => 'tags', // the method that defines the relationship in your Model
+//            'entity' => 'tags', // the method that defines the relationship in your Model
+//            'attribute' => 'name', // foreign key attribute that is shown to user
+//            'model' => "Backpack\NewsCRUD\app\Models\Tag", // foreign key model
+//            'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
+//        ]);
         $this->crud->addField([    // ENUM
             'name' => 'status',
-            'label' => 'Status',
+            'label' => 'Tình Trạng',
             'type' => 'enum',
         ]);
         $this->crud->addField([    // CHECKBOX
@@ -139,7 +136,54 @@ class ArticleCrudController extends CrudController
             'label' => 'Featured item',
             'type' => 'checkbox',
         ]);
-
+        $this->crud->addField([    // Image
+            'name' => 'image',
+            'label' => 'Ảnh đại diện',
+            'type' => 'browse',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+        ]);
+        $this->crud->addField([    // Image
+            'name' => 'gallery_image_1',
+            'label' => 'Ảnh trình chiếu 1',
+            'type' => 'browse',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+        ]);
+        $this->crud->addField([    // Image
+            'name' => 'gallery_image_2',
+            'label' => 'Ảnh trình chiếu 2',
+            'type' => 'browse',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+        ]);
+        $this->crud->addField([    // Image
+            'name' => 'gallery_image_3',
+            'label' => 'Ảnh trình chiếu 4',
+            'type' => 'browse',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+        ]);
+        $this->crud->addField([    // Image
+            'name' => 'gallery_image_4',
+            'label' => 'Ảnh trình chiếu 4',
+            'type' => 'browse',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+        ]);
+        $this->crud->addField([    // Image
+            'name' => 'gallery_image_5',
+            'label' => 'Ảnh trình chiếu 5',
+            'type' => 'browse',
+            'wrapperAttributes' => [
+                'class' => 'form-group col-md-6',
+            ],
+        ]);
         $this->crud->enableAjaxTable();
     }
 

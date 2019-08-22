@@ -26,6 +26,14 @@ Route::get('{slug}p-{id}', ['as' => 'detail.index', 'uses' => 'DetailController@
 
 
 
+Route::get('gioi-thieu.html', ['as' => 'Catalog.gioi_thieu', 'uses' => 'CatalogController@gioi_thieu']);
+Route::get('chinh-sach-doi-tra.html', ['as' => 'Catalog.chinh_sach_doi_tra', 'uses' => 'CatalogController@chinh_sach_doi_tra']);
+Route::get('dieu-khoan-dich-vu.html', ['as' => 'Catalog.dieu_khoan_dich_vu', 'uses' => 'CatalogController@dieu_khoan_dich_vu']);
+Route::get('huong-dan-mua-hang.html', ['as' => 'Catalog.huong_dan_mua_hang', 'uses' => 'CatalogController@huong_dan_mua_hang']);
+
+
+
+
 
 
 
