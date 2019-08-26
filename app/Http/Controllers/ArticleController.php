@@ -10,6 +10,7 @@ use Backpack\NewsCRUD\app\Models\Article;
 use App\Models\CategoryModel;
 use App\Models\ProductModel;
 use App\Models\CategoryProductModel;
+use View;
 
 
 class ArticleController extends Controller
@@ -37,5 +38,10 @@ class ArticleController extends Controller
     public function ajax() {
         $articles = Article::where('status', 'PUBLISHED')->orderBy('id', 'desc')->paginate(6);
         return view('catalog.article_item', compact('articles'));
+    }
+    public function articleView() {
+        $prods = ProductModel::where('status', 'PUBLISHED')->orderBy('views', 'desc')->limit(10)->get();
+        $content = view::make('home.home_product_hot', compact('prods'))->render();
+        file_put_contents(resource_path().'/views/cache/home_product_hot.blade.php', $content);
     }
 }

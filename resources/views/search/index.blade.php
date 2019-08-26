@@ -110,7 +110,7 @@ Yến Trắng Rút Lông, Yến Chân Rút Lông, Yến Hồng Huyết Tinh Ch�
                                         </div>
                                     </div>
                                     <div class="form-input" style="width: 100%">
-                                        <button type="button" class="btn-addcart-modal">Liên hệ Đặt hàng: {{env("PHONE")}}</button>
+                                        <button type="button" class="btn-addcart-modal">Liên hệ đặt hàng: {{env("PHONE")}}</button>
                                         <div class="qv-readmore">
                                             <span> hoặc </span><a class="read-more p-url" href="#" role="button">Xem chi tiết</a>
                                         </div>

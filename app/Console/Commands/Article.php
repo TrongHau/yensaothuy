@@ -3,23 +3,23 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Http\Controllers\SyncController;
+use App\Http\Controllers\ArticleController;
 
-class DeleteTemp extends Command
+class Article extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'delete_temp';
+    protected $signature = 'article_view';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'appointment reminder mail';
+    protected $description = 'article view';
 
     /**
      * Create a new command instance.
@@ -38,7 +38,7 @@ class DeleteTemp extends Command
      */
     public function handle()
     {
-        $controller = new SyncController();
-        $controller->deleteFolderTemp();
+        $controller = new ArticleController();
+        $controller->articleView();
     }
 }

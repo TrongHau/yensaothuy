@@ -160,223 +160,7 @@ use Jenssegers\Agent\Agent;
                     <div class="gallery-grid row">
                         @include('cache.home_product_promotion')
 
-
-                        <div class="box-prod frontpage2 grid-item" data-pro="1016881474">
-
-
-
-
-
-
-
-                            <div class="pdLoopItem animated zoomIn">
-                                <div class="itemLoop clearfix">
-                                    <div class="ct-box-op">
-                                        <div class="pdLoopImg elementFixHeight">
-                                            <a href="products/sua-meiji-so-9-820g-1-3-tuoi" title="Sữa meiji số 9 820g (1 - 3 tuổi)">
-                                                <img alt="Sữa meiji số 9 820g (1 - 3 tuổi)" data-reg="false" class="imgLoopItem" src="/image/upload_fb2a2b70d32449deae970477219cd687_compact.jpg" />
-                                            </a>
-                                            <ul class="link-quickview">
-                                                <li><a href="javascript:void(0)" title="Thêm vào giỏ" class="add-to-cart" data-id="1032218103"><i class="fa fa-shopping-basket"></i></a></li>
-                                                <li><a href="products/sua-meiji-so-9-820g-1-3-tuoi" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
-                                                <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="/products/sua-meiji-so-9-820g-1-3-tuoi" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
-                                            </ul>
-
-
-                                        </div>
-                                        <div class="pdLoopDetail text-center clearfix">
-                                            <h3 class="pdLoopName"><a class="productName" href="products/sua-meiji-so-9-820g-1-3-tuoi" title="Sữa meiji số 9 820g (1 - 3 tuổi)">Sữa meiji số 9 820g (1 - 3 tuổi) </a></h3>
-                                            <p class="pdPrice">
-
-                                                <span>1,200,000₫</span>
-
-
-                                            </p>
-                                            <div class="pdLoopListView">
-                                                <ul class="notStyle">
-                                                    <li><strong>Mã sản phẩm: </strong><span>chưa rõ</span></li>
-                                                    <li><strong>Thương hiệu: </strong><span>Khác</span></li>
-                                                    <li><strong>Mô tả ngắn: </strong>
-                                                        <span class="short-des">
-
-								Sữa Meiji số 9 820g phù hợp cho trẻ từ 1-3 tuổi, không chỉ chứa các chất dinh dưỡng cơ bản như protein, chất béo, carbohydrat mà còn có các vitamin và khoáng chất rất khó có được từ sữa mẹ, sữa bò và thức ăn dạng rắn. Meiji còn bổ sung cả axit docosahexaenoic (DHA), các nucleotides và đặc biệt là hệ chất xơ GOS hỗ trợ tiêu hóa làm nên đặc tính mát của sữa giúp thúc đẩy sự phát triển toàn diện cả về thể chất lẫn não bộ của trẻ trong suốt giai đoạn thơ ấu. Sản phẩm được dùng bổ sung cùng các...
-
-
-							</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div class="box-prod frontpage2 grid-item" data-pro="1016881475">
-
-
-
-
-
-
-
-                            <div class="pdLoopItem animated zoomIn">
-                                <div class="itemLoop clearfix">
-                                    <div class="ct-box-op">
-                                        <div class="pdLoopImg elementFixHeight">
-                                            <a href="products/sua-pediasure-ba-850g-1-10-tuoi.html" title="Sữa Pediasure ba 850g (1 - 10 tuổi)">
-                                                <img alt="Sữa Pediasure ba 850g (1 - 10 tuổi)" data-reg="false" class="imgLoopItem" src="/image/upload_eaf63ab35a48414f9329bd930afc468f_compact.jpg" />
-                                            </a>
-                                            <ul class="link-quickview">
-                                                <li><a href="javascript:void(0)" title="Thêm vào giỏ" class="add-to-cart" data-id="1032218105"><i class="fa fa-shopping-basket"></i></a></li>
-                                                <li><a href="products/sua-pediasure-ba-850g-1-10-tuoi.html" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
-                                                <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="/products/sua-pediasure-ba-850g-1-10-tuoi" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
-                                            </ul>
-
-
-                                        </div>
-                                        <div class="pdLoopDetail text-center clearfix">
-                                            <h3 class="pdLoopName"><a class="productName" href="products/sua-pediasure-ba-850g-1-10-tuoi.html" title="Sữa Pediasure ba 850g (1 - 10 tuổi)">Sữa Pediasure ba 850g (1 - 10 tuổi) </a></h3>
-                                            <p class="pdPrice">
-
-                                                <span>1,000,000₫</span>
-
-
-                                            </p>
-                                            <div class="pdLoopListView">
-                                                <ul class="notStyle">
-                                                    <li><strong>Mã sản phẩm: </strong><span>chưa rõ</span></li>
-                                                    <li><strong>Thương hiệu: </strong><span>Khác</span></li>
-                                                    <li><strong>Mô tả ngắn: </strong>
-                                                        <span class="short-des">
-
-								Sữa PediaSure BA là sản phẩm dinh dưỡng dùng bổ sung hoặc thay thế hoàn toàn bữa ăn của trẻ 1-10 tuổi, được đặc chế khoa học để cung cấp nguồn dinh dưỡng đầy đủ và cân đối, giúp thay thế và bổ sung kịp thời sự thiếu hụt của bữa ăn, cho trẻ khỏe mạnh và phát triển tốt, không bị suy dinh dưỡng hoặc béo phì, đặc biệt tốt khi dùng thường xuyên và lâu dài cho trẻ. Sữa đặc biệt phù hợp cho các bé biếng ăn, giúp trẻ nhanh chóng bắt kịp và tiếp tục đà tăng trưởng tối ưu...
-
-
-							</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div class="box-prod frontpage2 grid-item" data-pro="1016881478">
-
-
-
-
-
-
-
-                            <div class="pdLoopItem animated zoomIn">
-                                <div class="itemLoop clearfix">
-                                    <div class="ct-box-op">
-                                        <div class="pdLoopImg elementFixHeight">
-                                            <a href="products/suon-non" title="Sườn non">
-                                                <img alt="Sườn non" data-reg="false" class="imgLoopItem" src="/image/upload_ed386c6e7c5f439fac42d7404cb18e28_compact.jpg" />
-                                            </a>
-                                            <ul class="link-quickview">
-                                                <li><a href="javascript:void(0)" title="Thêm vào giỏ" class="add-to-cart" data-id="1032218111"><i class="fa fa-shopping-basket"></i></a></li>
-                                                <li><a href="products/suon-non" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
-                                                <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="/products/suon-non" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
-                                            </ul>
-
-
-                                        </div>
-                                        <div class="pdLoopDetail text-center clearfix">
-                                            <h3 class="pdLoopName"><a class="productName" href="products/suon-non" title="Sườn non">Sườn non </a></h3>
-                                            <p class="pdPrice">
-
-                                                <span>1,000,000₫</span>
-
-
-                                            </p>
-                                            <div class="pdLoopListView">
-                                                <ul class="notStyle">
-                                                    <li><strong>Mã sản phẩm: </strong><span>chưa rõ</span></li>
-                                                    <li><strong>Thương hiệu: </strong><span>Khác</span></li>
-                                                    <li><strong>Mô tả ngắn: </strong>
-                                                        <span class="short-des">
-
-								Sườn non heo (hữu cơ) đảm bảo chất lượng và vệ sinh an toàn thực phẩm.Phù hợp chế biến các món kho, chiên, rim, nấu canh,... thơm ngon và giàu dinh dưỡng cho cả gia đình.
-
-
-							</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div class="box-prod frontpage2 grid-item" data-pro="1016881471">
-
-
-
-
-
-
-
-                            <div class="pdLoopItem animated zoomIn">
-                                <div class="itemLoop clearfix">
-                                    <div class="ct-box-op">
-                                        <div class="pdLoopImg elementFixHeight">
-                                            <a href="products/san-pham-8.html" title="Xoài đỏ mỹ">
-                                                <img alt="Xoài đỏ mỹ" data-reg="false" class="imgLoopItem" src="/image/upload_83f770ac573043798bf11123d707c2c0_compact.jpg" />
-                                            </a>
-                                            <ul class="link-quickview">
-                                                <li><a href="javascript:void(0)" title="Thêm vào giỏ" class="add-to-cart" data-id="1032218098"><i class="fa fa-shopping-basket"></i></a></li>
-                                                <li><a href="products/san-pham-8.html" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
-                                                <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="/products/san-pham-8" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
-                                            </ul>
-
-
-                                        </div>
-                                        <div class="pdLoopDetail text-center clearfix">
-                                            <h3 class="pdLoopName"><a class="productName" href="products/san-pham-8.html" title="Xoài đỏ mỹ">Xoài đỏ mỹ </a></h3>
-                                            <p class="pdPrice">
-
-                                                <span>120,000₫</span>
-
-
-                                            </p>
-                                            <div class="pdLoopListView">
-                                                <ul class="notStyle">
-                                                    <li><strong>Mã sản phẩm: </strong><span>chưa rõ</span></li>
-                                                    <li><strong>Thương hiệu: </strong><span>BigC</span></li>
-                                                    <li><strong>Mô tả ngắn: </strong>
-                                                        <span class="short-des">
-
-								Giá trị dinh dưỡng:   Nho tươi cung cấp các chất dinh dưỡng, làm giảm mệt nhọc ngay lập tức. Các nghiên cứu cho thấy Nho tươi có chứa vitamin A, C, Calcium và sắt...Mã hàng:Thể loại: Rau, quả hữu cơ, Rau quả bán chạy, Rau, quả tốt cho người già,Rau quả có lợi cho sức khỏe, Rau, quả nhập khẩu, Rau, quả trong nước, Sản phẩm nổi bật, Trang chủ,
-
-
-							</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        @include('cache.home_product_hot')
 
                         @include('cache.home_product_featured')
 
@@ -716,18 +500,8 @@ use Jenssegers\Agent\Agent;
                                         <div class="m-tt">
                                         </div>
                                     </div>
-                                    <div class="p-option-wrapper">
-                                        <select name="id" class="" id="p-select"></select>
-                                    </div>
-
-                                    <div class="form-input ">
-                                        <label>Số lượng</label>
-                                        <input name="quantity" type="number" min="1" value="1" />
-                                    </div>
-
                                     <div class="form-input" style="width: 100%">
-                                        <button type="button" class="btn-addcart">Thêm vào giỏ</button>
-                                        <button disabled class="btn-detail addtocart btn-color-add btn-min-width btn-mgt btn-soldout">Hết hàng</button>
+                                        <button type="button" class="btn-addcart-modal">Liên hệ đặt hàng: {{env("PHONE")}}</button>
                                         <div class="qv-readmore">
                                             <span> hoặc </span><a class="read-more p-url" href="#" role="button">Xem chi tiết</a>
                                         </div>
@@ -749,16 +523,28 @@ use Jenssegers\Agent\Agent;
             if ($(window).width() < 680) { window.location = purl; return false; }
             modal = $('#quick-view-modal'); modal.modal('show');
             $.ajax({
-                url: purl + '.js',
+                url: '/chi-tiet-san-pham',
                 async: false,
+                method: "POST",
+                dataType: "Json",
+                data: {id: purl},
                 success: function (product) {
-                    $.each(product.options, function (i, v) {
-                        product.options[i] = v.name;
-                    })
-                    modal.find('.p-title').html('<h1>' + product.title + '</h1>');
-                    modal.find('.p-option-wrapper').html(p_select_data);
-                    modal.find('.m-vendor').html('<span>Nhà cung cấp: </span>'+ product.vendor);
-                    var productdes = product.description;
+                    if(!product.success) {
+                        alert(product.message);
+                        return false;
+                    }
+                    modal.find('.p-title').html('<h1>' + product.data.title + '</h1>');
+                    if(product.data.supplier) {
+                        modal.find('.m-vendor').removeClass('hidden');
+                        modal.find('.m-vendor').html('<span>Nhà cung cấp: </span>'+ product.data.supplier);
+                    }else{
+                        modal.find('.m-vendor').addClass('hidden');
+                    }
+                    modal.find('.p-price').html(formatNumber(product.data.price) + 'đ');
+                    modal.find('.m-sku').html('<span>Mã sản phẩm: </span>Yen-'+ product.data.id);
+
+
+                    var productdes = product.data.short_content;
                     if(productdes != '' && productdes != null){
                         var re_productdes = productdes.replace(/(<([^>]+)>)/ig,"")
                         var des = re_productdes.split("&nbsp;").splice(0, 50).join(" ") + "...";
@@ -768,97 +554,76 @@ use Jenssegers\Agent\Agent;
                         modal.find('.form-des').html('Chưa có mô tả cho sản phẩm này!');
                     }
                     $('.image-zoom').html(p_zoom);
-                    modal.find('.p-url').attr('href', product.url);
-                    if (product.images.length == 0) {
-                        modal.find('.p-product-image-feature').attr('src', 'image/noDefaultImage6_large.gif');
+                    modal.find('.p-url').attr('href', '/san-pham/' + product.data.slug + '.html');
+                    var img_slider = [];
+                    if(product.data.gallery_image){
+                        img_slider = JSON.parse(product.data.gallery_image);
+                        img_slider.unshift(product.data.image);
+                    }else{
+                        img_slider.push(product.data.image);
                     }
-                    else {
-                        $('#p-sliderproduct').remove();
-                        $('.image-zoom').append("<div id='p-sliderproduct' class='owl_pages '>");
-                        $('#p-sliderproduct').append("<ul class='slides owlDesign notStyle'>");
-                        $('#p-sliderproduct .slides').hide();
-                        $.each(product.images, function (i, v) {
-                            elem = $('<li class="product-thumb">').append('<a href="#" data-image="" data-zoom-image=""><img /></a>');
-                            elem.find('a').attr('data-image', Haravan.resizeImage(v, 'medium'));
-                            elem.find('a').attr('data-zoom-image', v);
-                            elem.find('img').attr('data-image', Haravan.resizeImage(v, 'medium'));
-                            elem.find('img').attr('data-zoom-image',v);
-                            elem.find('img').attr('src', Haravan.resizeImage(v, 'small'));
-                            modal.find('.slides').append(elem);
-                        })
+                    $('#p-sliderproduct').remove();
+                    $('.image-zoom').append("<div id='p-sliderproduct' class='owl_pages '>");
+                    $('#p-sliderproduct').append("<ul class='slides owlDesign notStyle'>");
+                    $('#p-sliderproduct .slides').hide();
+                    $.each(img_slider, function (i, v) {
+                        var img_item = get_bp_image(v, 'tmb');
+                        elem = $('<li class="product-thumb">').append('<a href="#" data-image="" data-zoom-image=""><img /></a>');
+                        elem.find('a').attr('data-image', img_item);
+                        elem.find('a').attr('data-zoom-image', img_item);
+                        elem.find('img').attr('data-image', img_item);
+                        elem.find('img').attr('data-zoom-image',img_item);
+                        elem.find('img').attr('src', img_item);
+                        modal.find('.slides').append(elem);
+                    });
 
-                        modal.find('.p-product-image-feature').attr('src', product.featured_image);
-                        $(".modal-footer .btn-readmore").attr('href', purl);
-                        var iflag = 0;
-                        $('#p-sliderproduct img').load(function () {
-                            iflag++;
-                            if (iflag == $('#p-sliderproduct img').length) {
-                                setTimeout(function(){
-                                    var owl = $('#p-sliderproduct .slides');
-                                    owl.on('initialize.owl.carousel initialized.owl.carousel ' +
-                                        'initialize.owl.carousel initialize.owl.carousel ' +
-                                        'resize.owl.carousel resized.owl.carousel ' +
-                                        'refresh.owl.carousel refreshed.owl.carousel ' +
-                                        'update.owl.carousel updated.owl.carousel ' +
-                                        'drag.owl.carousel dragged.owl.carousel ' +
-                                        'translate.owl.carousel translated.owl.carousel ' +
-                                        'to.owl.carousel changed.owl.carousel', function(e) {
-                                        $('#p-sliderproduct .slides').show();
-                                    })
-                                    owl.owlCarousel({
-                                        items : 4,
-                                        loop: false,
-                                        autoplay: false,
-                                        margin: 5,
-                                        responsiveClass: true,
-                                        nav : true,
-                                        navText: ['‹' , '›'],
-                                        responsive: {
-                                            0: {
-                                                items: 1
-                                            },
-                                            370: {
-                                                items: 2
-                                            },
-                                            480: {
-                                                items: 3
-                                            },
-                                            768: {
-                                                items: 4
-                                            },
-                                            992: {
-                                                items: 4
-                                            }
+                    modal.find('.p-product-image-feature').attr('src', get_bp_image(product.data.image, 'tmb'));
+                    var iflag = 0;
+                    $('#p-sliderproduct img').load(function () {
+                        iflag++;
+                        if (iflag == $('#p-sliderproduct img').length) {
+                            setTimeout(function(){
+                                var owl = $('#p-sliderproduct .slides');
+                                owl.on('initialize.owl.carousel initialized.owl.carousel ' +
+                                    'initialize.owl.carousel initialize.owl.carousel ' +
+                                    'resize.owl.carousel resized.owl.carousel ' +
+                                    'refresh.owl.carousel refreshed.owl.carousel ' +
+                                    'update.owl.carousel updated.owl.carousel ' +
+                                    'drag.owl.carousel dragged.owl.carousel ' +
+                                    'translate.owl.carousel translated.owl.carousel ' +
+                                    'to.owl.carousel changed.owl.carousel', function(e) {
+                                    $('#p-sliderproduct .slides').show();
+                                })
+                                owl.owlCarousel({
+                                    items : 4,
+                                    loop: false,
+                                    autoplay: false,
+                                    margin: 5,
+                                    responsiveClass: true,
+                                    nav : true,
+                                    navText: ['‹' , '›'],
+                                    responsive: {
+                                        0: {
+                                            items: 1
+                                        },
+                                        370: {
+                                            items: 2
+                                        },
+                                        480: {
+                                            items: 3
+                                        },
+                                        768: {
+                                            items: 4
+                                        },
+                                        992: {
+                                            items: 4
                                         }
-                                    });
-                                    modal.find('.owl-item:first-child .product-thumb').addClass('active');
-                                },500)
-                            }
-                        })
-                    }
-                    $.each(product.variants, function (i, v) {
-                        modal.find('select#p-select').append("<option value='" + v.id + "'>" + v.title + ' - ' + v.price + "</option>");
+                                    }
+                                });
+                                modal.find('.owl-item:first-child .product-thumb').addClass('active');
+                            },500)
+                        }
                     })
-                    if (product.variants.length == 1 && product.variants[0].title.indexOf('Default') != -1)
-                        $('.p-option-wrapper').hide();
-                    else
-                        $('.p-option-wrapper').show();
-                    if (product.variants.length == 1 && product.variants[0].title.indexOf('Default') != -1) {
-                        callBack(product.variants[0], null);
-                    }
-                    else {
-                        new Haravan.OptionSelectors("p-select", { product: product, onVariantSelected: callBack });
-                        debugger
-                        if (product.options.length == 1 && product.options[0].indexOf('Tiêu đề')==-1)
-
-                            modal.find('.selector-wrapper:eq(0)').prepend('<label>' + product.options[0] + '</label>');
-
-                        $('.p-option-wrapper select:not(#p-select)').each(function () {
-                            $(this).wrap('<span class="custom-dropdown custom-dropdown--white"></span>');
-                            $(this).addClass("custom-dropdown__select custom-dropdown__select--white");
-                        });
-                        callBack(product.variants[0], null);
-                    }
                 }
             });
             return false;
