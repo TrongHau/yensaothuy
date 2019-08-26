@@ -8,12 +8,7 @@
 
         <li><a href="/gioi-thieu.html">Giới thiệu</a></li>
 
-
         <li><a href="/chinh-sach-doi-tra.html">Chính sách đổi trả</a></li>
-
-
-        <li><a href="/chinh-sach-bao-mat.html">Chính sách bảo mật</a></li>
-
 
         <li><a href="/dieu-khoan-dich-vu.html">Điều khoản dịch vụ</a></li>
 
