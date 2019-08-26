@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="vi" >
 
+@include('layouts.header')
 <body class="stBody stHome index">
 
 <div id="insLoadpage" class="preloader">
