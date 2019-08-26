@@ -108,6 +108,9 @@ a:focus{
 		width: 1200px;
 		padding: 0;
 	}
+	.menuMega .container {
+		width: 800px;
+	}
 }
 /* responsive */
 @media (min-width: 768px){
@@ -1340,6 +1343,7 @@ Content
 .ct-box-op h3 {
 	font-size: 18px;
 	padding: 0 10px;
+    padding-top: 5px;
 }
 .ct-box-op h3 a{
 	font-size: 15px;
@@ -3318,7 +3322,7 @@ body.no-scroll {
 	width: 100%;
 }
 .google-map iframe {
-	filter: saturate(0);
+	/*filter: saturate(0);*/
 	width: 100%;
 	height: 500px;
 	border: 0;
@@ -6664,9 +6668,10 @@ ul.product-list.view_list li.item_product .chir_loop .product_view_list {
 	bottom: 0;
 	margin: auto;
 	display: table;
-	width: 100%;
+	width: 50%;
 	text-align: center;
 	left: 0;
+	text-align: left;
 }
 .banner-h1 .part-bn .caption-bn2 span {
 	font-size: 24px;

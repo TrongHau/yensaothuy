@@ -347,7 +347,7 @@ abstract class elFinderVolumeDriver
         // thumbnails dir URL. Set it if store thumbnails outside root directory
         'tmbURL' => '',
         // thumbnails size (px)
-        'tmbSize' => 48,
+        'tmbSize' => 540,
         // thumbnails crop (true - crop, false - scale image to fit thumbnail size)
         'tmbCrop' => true,
         // thumbnails background color (hex #rrggbb or 'transparent')
@@ -5379,7 +5379,8 @@ abstract class elFinderVolumeDriver
             return false;
         }
 
-        $name = $this->tmbname($stat);
+//        $name = $this->tmbname($stat);
+        $name = $stat['name'];
         $tmb = $this->tmbPath . DIRECTORY_SEPARATOR . $name;
 
         $maxlength = -1;
@@ -5482,14 +5483,12 @@ abstract class elFinderVolumeDriver
                 }
             }
         }
-
         /* If image smaller or equal thumbnail size - just fitting to thumbnail square */
         if ($s[0] <= $tmbSize && $s[1] <= $tmbSize) {
             $result = $this->imgSquareFit($tmb, $tmbSize, $tmbSize, 'center', 'middle', $this->options['tmbBgColor'], 'png');
         } else {
 
             if ($this->options['tmbCrop']) {
-
                 $result = $tmb;
                 /* Resize and crop if image bigger than thumbnail */
                 if (!(($s[0] > $tmbSize && $s[1] <= $tmbSize) || ($s[0] <= $tmbSize && $s[1] > $tmbSize)) || ($s[0] > $tmbSize && $s[1] > $tmbSize)) {
@@ -5727,7 +5726,6 @@ abstract class elFinderVolumeDriver
         if (!$jpgQuality) {
             $jpgQuality = $this->options['jpgQuality'];
         }
-
         elFinder::extendTimeLimit(300);
         switch ($this->imgLib) {
             case 'imagick':
@@ -5803,7 +5801,7 @@ abstract class elFinderVolumeDriver
                         }
                     }
                     if ($bgNum === false) {
-                        $this->gdImageBackground($tmp, 'transparent');
+                        $this->gdImageBackground($tmp, '#ffffff');
                     }
 
                     $size_w = $width;

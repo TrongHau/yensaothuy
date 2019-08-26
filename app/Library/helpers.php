@@ -157,4 +157,16 @@ class Helpers
             }
         }
     }
+    public static function get_bp_image($image, $size = 'full') {
+        if($size == 'full') {
+            return '/'.$image;
+        }else {
+            $arrFile = explode('/', $image);
+            if(count($arrFile) == 1)
+                $arrFile = explode('\\', $image);
+            $removed = array_pop($arrFile);
+            $name = '/uploads/.tmb/' . $removed;
+            return $name;
+        }
+    }
 }

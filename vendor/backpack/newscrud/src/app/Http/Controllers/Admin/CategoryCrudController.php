@@ -20,7 +20,7 @@ class CategoryCrudController extends CrudController
         */
         $this->crud->setModel("Backpack\NewsCRUD\app\Models\Category");
         $this->crud->setRoute(config('backpack.base.route_prefix', 'admin').'/category');
-        $this->crud->setEntityNameStrings('category', 'categories');
+        $this->crud->setEntityNameStrings('Danh mục tin tức', 'categories');
 
         /*
         |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ class CategoryCrudController extends CrudController
         // ------ CRUD COLUMNS
         $this->crud->addColumn([
                                 'name' => 'name',
-                                'label' => 'Name',
+                                'label' => 'Tên danh mục',
                             ]);
         $this->crud->addColumn([
                                 'name' => 'slug',

@@ -24,7 +24,6 @@ trait ReorderOperation
         $this->data['entries'] = $this->crud->getEntries();
         $this->data['crud'] = $this->crud;
         $this->data['title'] = $this->crud->getTitle() ?? trans('backpack::crud.reorder').' '.$this->crud->entity_name;
-
         // load the view from /resources/views/vendor/backpack/crud/ if it exists, otherwise load the one in the package
         return view($this->crud->getReorderView(), $this->data);
     }
@@ -48,6 +47,10 @@ trait ReorderOperation
         } else {
             return false;
         }
+
+        $category = \App\Models\CategoryProductModel::getTree();
+        $content = \View::make('catalog.menu_category', compact('category'))->render();
+        file_put_contents(resource_path().'/views/cache/menu.blade.php', $content);
 
         return 'success for '.$count.' items';
     }

@@ -1,63 +1,47 @@
 <?php
 use App\Library\Helpers;
 use Jenssegers\Agent\Agent;
+$img_f = Helpers::get_bp_image($prod->image, 'tmp');
+$imgs_prod = [$img_f];
+if($prod->gallery_image) {
+    foreach (json_decode($prod->gallery_image) as $item) {
+        $imgs_prod[] = Helpers::get_bp_image($item, 'tmp');
+    }
+}
+$titleMeta = $prod->title. ' - Yến Sào Thủy';
 ?>
 
 @section('meta')
     <base href="{{env('APP_URL')}}">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta name="author" content="Bat Dong San Company">
+    <meta name="author" content="Yen sao thuy">
     <meta name="copyright" content="{{env('APP_NAME')}}" />
     <meta name="revisit-after" content="7 Days">
-    <meta name="keywords" content="batdongsan; rao ban bat dong san; bds; bat dong san Ho Chi Minh; bat dong san Ha Noi; cap nhat bat dong san; thu bat dong san; mua dat; thue dat; can thue nha; can thue dat">
-    <meta name="description" content="Nhà đất bán, Bán căn hộ chung cư, Bán nhà biệt thự, liền kề, Bán nhà mặt phố, Bán đất nền dự án, Bán đất, Nhà đất cho thuê, Cho thuê căn hộ chung cư,
-        Cho thuê nhà riêng, Cho thuê nhà mặt phố, Cho thuê nhà trọ, phòng trọ, Cho thuê văn phòng, Cho thuê kho, nhà xưởng, đất, Mua nhà riêng, Cần thuê kho, nhà xưởng, đất, Cần thuê nhà trọ, phòng trọ, Tất cả các loại đất bán">
+    <meta name="keywords" content="Yến Sào Thủy, Yến Nhà, Yến Đảo, Yến hũ chưng thủ công, Yến Nguyên Tổ Sơ Chế, Yến Tinh Chế, Yến Trắng Nguyên Tổ  Sơ Chế Còn Lông, Huyết Yến Nguyên Tổ Sơ Chế Còn Lông,Yến Vụn, Yến Sợi Tinh Chế Loại 1, Yến Sợi Tinh Chế Đặc Biệt, Yến Sợi Tinh Chế Cao Cấp
+Yến Trắng Rút Lông, Yến Chân Rút Lông, Yến Hồng Huyết Tinh Chế, Yến Hồng Vàng Tinh Chế, Yến Hồng Rút Lông, Yến Hồng Rút Lông, Yến Chân Hồng Huyết, Yến Đảo Nguyên Tổ Sơ Chế Còn Lông, Yến Đảo Tinh Chế, Yến hũ Chưng Sẵn Sợi Vụn, Yến hũ Chưng Sẵn Sợi Tinh Chế, Yến hũ Chưng Sẵn Chân Tổ, Yến hũ Chưng Sẵn Sợi Hồng Huyết">
     <link rel="canonical" href="{{url()->current()}}" />
     <link rel="image_src" href="{{env('APP_URL') . THUMBNAIL_DEFAULT_META}}" />
-    <meta name="title" content="Bất Động Sản Company" />
+    <meta name="title" content="{{$prod->title}} - Yến Sào Thủy" />
     <meta property="og:image" content="{{env('APP_URL') . THUMBNAIL_DEFAULT_META}}" />
     <meta property="og:url" content="{{url()->current()}}" />
-    <meta property="og:title" content="Bất Động Sản Company" />
-    <meta property="og:description" content="batdongsan; rao ban bat dong san; bds; bat dong san Ho Chi Minh; bat dong san Ha Noi; cap nhat bat dong san; thu bat dong san; mua dat; thue dat; can thue nha; can thue dat">
-    <meta name="description" content="Nhà đất bán, Bán căn hộ chung cư, Bán nhà biệt thự, liền kề, Bán nhà mặt phố, Bán đất nền dự án, Bán đất, Nhà đất cho thuê, Cho thuê căn hộ chung cư,
-        Cho thuê nhà riêng, Cho thuê nhà mặt phố, Cho thuê nhà trọ, phòng trọ, Cho thuê văn phòng, Cho thuê kho, nhà xưởng, đất, Mua nhà riêng, Cần thuê kho, nhà xưởng, đất, Cần thuê nhà trọ, phòng trọ, Tất cả các loại đất bán" />
+    <meta property="og:title" content="{{$prod->title}} - Yến Sào Thủy" />
+    <meta name="description" content="Yến Sào Thủy, Yến Nhà, Yến Đảo, Yến hũ chưng thủ công, Yến Nguyên Tổ Sơ Chế, Yến Tinh Chế, Yến Trắng Nguyên Tổ  Sơ Chế Còn Lông, Huyết Yến Nguyên Tổ Sơ Chế Còn Lông,Yến Vụn, Yến Sợi Tinh Chế Loại 1, Yến Sợi Tinh Chế Đặc Biệt, Yến Sợi Tinh Chế Cao Cấp
+Yến Trắng Rút Lông, Yến Chân Rút Lông, Yến Hồng Huyết Tinh Chế, Yến Hồng Vàng Tinh Chế, Yến Hồng Rút Lông, Yến Hồng Rút Lông, Yến Chân Hồng Huyết, Yến Đảo Nguyên Tổ Sơ Chế Còn Lông, Yến Đảo Tinh Chế, Yến hũ Chưng Sẵn Sợi Vụn, Yến hũ Chưng Sẵn Sợi Tinh Chế, Yến hũ Chưng Sẵn Chân Tổ, Yến hũ Chưng Sẵn Sợi Hồng Huyết" />
     <meta property="og:type" content="website" />
     <meta property="og:updated_time" content="{{time()}}" />
 @endsection
 @extends('layouts.app')
 @section('content')
     <main id="main" class="main">
-
-
-
-
-
-
-
         <section id="stProductPage" class="tamplateSection">
-
-
-
             <div class="stBreadcrumb ">
                 <div class="banner-breadcrumb">
-                    <h2>Sườn non</h2>
+                    <h2>{{$prod->title}}</h2>
                     <ul>
                         <li><a href="/" target="_self">Trang chủ</a></li>
 
-
-                        <!--li><a href="/collections" target="_self">Danh mục</a></li-->
-
-
-
-
-
-                        <li><a href="/collections/onsale" target="_self">Sản phẩm khuyến mãi</a></li>
-
-
-
-                        <li class="active"><span> Sườn non</span></li>
-
+                        <li><a href="/danh-muc/{{$category->slug}}.html" target="_self">{{$category->name}}</a></li>
 
                     </ul>
                 </div>
@@ -70,40 +54,22 @@ use Jenssegers\Agent\Agent;
                                 <ul class="slides">
                                     <li>
 								<span>
-									<img class="product-image-feature" src="//product.hstatic.net/1000314614/product/upload_ed386c6e7c5f439fac42d7404cb18e28_master.jpg" alt="">
+									<img class="product-image-feature" src="{{$img_f}}" alt="">
 								</span>
                                     </li>
                                 </ul>
                             </div>
                             <div id="carousel" class="flexslider">
 
-                                <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 800%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
-
-
-                                        <li class="product-thumb checked" style="width: 75px; margin-right: 10px; float: left; display: block;">
-                                            <a href="#" data-image="//product.hstatic.net/1000314614/product/upload_ed386c6e7c5f439fac42d7404cb18e28_master.jpg" data-zoom-image="//product.hstatic.net/1000314614/product/upload_ed386c6e7c5f439fac42d7404cb18e28_master.jpg">
-                                                <img src="//product.hstatic.net/1000314614/product/upload_ed386c6e7c5f439fac42d7404cb18e28_compact.jpg" data-image="//product.hstatic.net/1000314614/product/upload_ed386c6e7c5f439fac42d7404cb18e28_master.jpg" alt="" draggable="false">
+                                <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                                    <ul class="slides" style="width: 800%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+                                        @foreach($imgs_prod as $key => $item)
+                                        <li class="product-thumb {{$key == 0 ? 'checked' : ''}}" style="width: 75px; margin-right: 10px; float: left; display: block;">
+                                            <a href="#" data-image="{{$item}}" data-zoom-image="{{$item}}">
+                                                <img src="{{$item}}" data-image="{{$item}}" alt="" draggable="false">
                                             </a>
                                         </li>
-
-                                        <li class="product-thumb " style="width: 75px; margin-right: 10px; float: left; display: block;">
-                                            <a href="#" data-image="//product.hstatic.net/1000314614/product/upload_e5a3415c72d84630a62842108f3c45b6_master.jpg" data-zoom-image="//product.hstatic.net/1000314614/product/upload_e5a3415c72d84630a62842108f3c45b6_master.jpg">
-                                                <img src="//product.hstatic.net/1000314614/product/upload_e5a3415c72d84630a62842108f3c45b6_compact.jpg" data-image="//product.hstatic.net/1000314614/product/upload_e5a3415c72d84630a62842108f3c45b6_master.jpg" alt="" draggable="false">
-                                            </a>
-                                        </li>
-
-                                        <li class="product-thumb " style="width: 75px; margin-right: 10px; float: left; display: block;">
-                                            <a href="#" data-image="//product.hstatic.net/1000314614/product/upload_043d5b18cba645e193b545540af47ed4_master.jpg" data-zoom-image="//product.hstatic.net/1000314614/product/upload_043d5b18cba645e193b545540af47ed4_master.jpg">
-                                                <img src="//product.hstatic.net/1000314614/product/upload_043d5b18cba645e193b545540af47ed4_compact.jpg" data-image="//product.hstatic.net/1000314614/product/upload_043d5b18cba645e193b545540af47ed4_master.jpg" alt="" draggable="false">
-                                            </a>
-                                        </li>
-
-                                        <li class="product-thumb " style="width: 75px; margin-right: 10px; float: left; display: block;">
-                                            <a href="#" data-image="//product.hstatic.net/1000314614/product/upload_d1885b3b17ab44e8bb776ead4ededd84_master.jpg" data-zoom-image="//product.hstatic.net/1000314614/product/upload_d1885b3b17ab44e8bb776ead4ededd84_master.jpg">
-                                                <img src="//product.hstatic.net/1000314614/product/upload_d1885b3b17ab44e8bb776ead4ededd84_compact.jpg" data-image="//product.hstatic.net/1000314614/product/upload_d1885b3b17ab44e8bb776ead4ededd84_master.jpg" alt="" draggable="false">
-                                            </a>
-                                        </li>
-
+                                        @endforeach
 
                                     </ul></div><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li><li class="flex-nav-next"><a class="flex-next flex-disabled" href="#" tabindex="-1">Next</a></li></ul></div>
                         </div>
@@ -111,138 +77,44 @@ use Jenssegers\Agent\Agent;
                     <div class="col-md-7 col-sm-7 col-xs-12">
                         <div class="description-product">
                             <div class="info-desc">
-                                <h2>Sườn non</h2>
+                                <h2>{{$prod->title}}</h2>
 
                                 <div class="price pdPrice">
 
-                                    <span id="pro-price"><span>1,000,000₫</span></span>
+                                    <span id="pro-price"><span>{{number_format($prod->price)}}₫</span></span>
 
 
                                 </div>
-
-                                <div class="cate">Trạng thái : <a id="price-preview" href="javascript:void(0)">
-
-                                        Còn hàng
-
-                                    </a></div>
                                 <div class="shortDesc">
 
-                                    <p>
-                                        Sườn non heo (hữu cơ)&nbsp;đảm bảo chất lượng và vệ sinh an toàn thực phẩm.Phù hợp chế biến các món kho, chiên, rim, nấu canh,... thơm ngon và giàu dinh dưỡng cho cả gia đình.</p>
+                                  <?php echo $prod->short_content ?>
 
                                 </div>
                             </div>
                             <div class="qty-cart">
-                                <form id="form-pro" action="#" method="get" class="qty-number-cart">
-                                    <input type="button" value="-" class="qtyminus" field="quantity">
-                                    <input type="text" name="quantity" value="1" class="qty">
-                                    <input type="button" value="+" class="qtyplus" field="quantity">
-
-                                    <div class="select-swatch" style="display:table;clear:both">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                        <div id="variant-swatch-0" class="swatch clearfix" data-option="option1" data-option-index="0">
-                                            <div class="header-s">Tiêu đề</div>
-                                            <div class="select-swap">
-
-
-
-
-
-
-
-                                                <div data-value="1000g" class="n-sd swatch-element 1000g ">
-                                                    <input class="variant-0" id="swatch-0-1000g" type="radio" name="option1" value="1000g" checked="">
-
-                                                    <label for="swatch-0-1000g" class="sd">
-                                                        1000g
-                                                        <img class="crossed-out" src="//theme.hstatic.net/1000314614/1000404249/14/sold.png?v=140">
-
-                                                        <img class="img-check" src="//theme.hstatic.net/1000314614/1000404249/14/select-pro.png?v=140">
-                                                    </label>
-
-                                                </div>
-
-
-
-
-
-
-
-                                                <div data-value="2000g" class="n-sd swatch-element 2000g ">
-                                                    <input class="variant-0" id="swatch-0-2000g" type="radio" name="option1" value="2000g">
-
-                                                    <label for="swatch-0-2000g">
-                                                        2000g
-                                                        <img class="crossed-out" src="//theme.hstatic.net/1000314614/1000404249/14/sold.png?v=140">
-
-                                                        <img class="img-check" src="//theme.hstatic.net/1000314614/1000404249/14/select-pro.png?v=140">
-                                                    </label>
-
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-
-
-
-
-                                    </div>
-
-                                    <div class="selector-wrapper"><label for="productSelect-option-0">Tiêu đề</label><select class="single-option-selector" data-option="option1" id="productSelect-option-0"><option value="1000g">1000g</option><option value="2000g">2000g</option></select></div><select name="id" id="productSelect" class="product-single-variants" style="display:none">
-
-
-                                        <option selected="selected" data-sku="" value="1032218111">1000g - 1,000,000 VND</option>
-
-
-
-                                        <option data-sku="" value="1032218112">2000g - 2,000,000 VND</option>
-
-
-                                    </select>
-
-                                </form>
                                 <div class="link-detail">
-                                    <a href="javascript:void(0)" class="add-to-c btnAddCart">Thêm vào giỏ</a>
-                                    <a href="javascript:void(0)" class="add-to-c btnSoldOut" style="display:none">Thêm vào giỏ</a>
+                                    <a href="javascript:void(0)" class="btn-addcart-modal">Liên hệ Đặt hàng: {{env("PHONE")}}</a>
                                 </div>
                             </div>
                             <div class="list-pd-dt">
                                 <div class="sku-p">
                                     <b>Mã sản phẩm</b>
-                                    <p>Null</p>
+                                    <p>YEN-{{$prod->id}}</p>
                                 </div>
 
-
-
-
-
-
-
-
+                                @if($prod->supplier)
+                                    <div class="sku-p">
+                                        <b>Thương hiệu</b>
+                                        <p>{{$prod->supplier}}</p>
+                                    </div>
+                                @endif
                                 <div class="share-p">
                                     <b>Chia sẻ</b>
                                     <ul>
-                                        <li><a target="_blank" href="//www.facebook.com/sharer.php?u=https://vegetables-tmt.myharavan.com/products/suon-non"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a target="_blank" href="//twitter.com/share?text=S%C6%B0%E1%BB%9Dn%20non&amp;url=https://vegetables-tmt.myharavan.com/products/suon-non"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a target="_blank" href="//pinterest.com/pin/create/button/?url=https://vegetables-tmt.myharavan.com/products/suon-non&amp;media=http://hstatic.net/0/0/global/noDefaultImage6_1024x1024.gif&amp;description=S%C6%B0%E1%BB%9Dn%20non"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a target="_blank" href="//plus.google.com/share?url=https://vegetables-tmt.myharavan.com/products/suon-non" class="share-google"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a target="_blank" href="//www.facebook.com/sharer.php?u={{url()->current()}}"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a target="_blank" href="//twitter.com/share?text=S%C6%B0%E1%BB%9Dn%20non&amp;url={{url()->current()}}"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a target="_blank" href="//pinterest.com/pin/create/button/?url={{url()->current()}}&amp;media=http://hstatic.net/0/0/global/noDefaultImage6_1024x1024.gif&amp;description=S%C6%B0%E1%BB%9Dn%20non"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a target="_blank" href="//plus.google.com/share?url={{url()->current()}}" class="share-google"><i class="fa fa-google-plus"></i></a></li>
                                     </ul>
                                 </div>
 
@@ -260,25 +132,31 @@ use Jenssegers\Agent\Agent;
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="tab1">
-                            <div class="desc-tab">
-                                <p>
-                                </p><p><strong>Sườn non heo (hữu cơ)</strong>&nbsp;đảm bảo chất lượng và vệ sinh an toàn thực phẩm.</p><p>Phù hợp chế biến các món kho, chiên, rim, nấu canh,... thơm ngon và giàu dinh dưỡng cho cả gia đình.</p>
-                                <p></p>
+                            <div class="desc-tab"><br/>
+                                <?php echo $prod->content ?>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab3">
                             <div id="binhluan">
-                                <div class="product-comment-fb">
-                                    <div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="https://vegetables-tmt.myharavan.com/products/suon-non" data-numposts="5" width="100%" data-colorscheme="light" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;color_scheme=light&amp;container_width=0&amp;height=100&amp;href=https%3A%2F%2Fvegetables-tmt.myharavan.com%2Fproducts%2Fsuon-non&amp;locale=vi_VN&amp;numposts=5&amp;sdk=joey&amp;version=v2.8" style="width: 100%;"><span style="vertical-align: bottom; width: 100%; height: 0px;"><iframe name="f1e8c9cd9391aa" width="1000px" height="100px" title="fb:comments Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.8/plugins/comments.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df365e951405e168%26domain%3Dvegetables-tmt.myharavan.com%26origin%3Dhttps%253A%252F%252Fvegetables-tmt.myharavan.com%252Ff305d2286ef539c%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=0&amp;height=100&amp;href=https%3A%2F%2Fvegetables-tmt.myharavan.com%2Fproducts%2Fsuon-non&amp;locale=vi_VN&amp;numposts=5&amp;sdk=joey&amp;version=v2.8" class="" style="border: none; visibility: visible; width: 100%; height: 0px;"></iframe></span></div>
-                                </div>
-                                <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=44#channel=f305d2286ef539c&amp;origin=https%3A%2F%2Fvegetables-tmt.myharavan.com" style="border: none;"></iframe></div><div></div></div></div>
-                                <script>(function(d, s, id) {
+                                <div class="fb-comments" data-href="{{url()->current()}}" data-width="100%" data-numposts="10"></div>
+                                <script>
+                                    window.fbAsyncInit = function() {
+                                        FB.init({
+                                            appId            : '<?php echo env('FACEBOOK_APP_ID') ?>',
+                                            autoLogAppEvents : true,
+                                            xfbml            : true,
+                                            version          : 'v3.1'
+                                        });
+                                    };
+                                    (function(d, s, id){
                                         var js, fjs = d.getElementsByTagName(s)[0];
-                                        if (d.getElementById(id)) return;
+                                        if (d.getElementById(id)) {return;}
                                         js = d.createElement(s); js.id = id;
-                                        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
+                                        js.src = "https://connect.facebook.net/en_US/sdk.js";
                                         fjs.parentNode.insertBefore(js, fjs);
-                                    }(document, 'script', 'facebook-jssdk'));</script>
+                                    }(document, 'script', 'facebook-jssdk'));
+                                </script>
+
                             </div>
                         </div>
                     </div>
@@ -294,473 +172,9 @@ use Jenssegers\Agent\Agent;
                                 </div>
                             </div>
                             <div class="relatedListting">
-
-
-
-
-
-
-
-
                                 <div class="contentRelatedPd row ">
-
-
-
-
-
-
-
-                                    <div class="itemProduct col-md-3 col-sm-6 col-xs-6">
-
-
-
-
-
-
-
-                                        <div class="pdLoopItem animated zoomIn">
-                                            <div class="itemLoop clearfix">
-                                                <div class="ct-box-op">
-                                                    <div class="pdLoopImg elementFixHeight">
-                                                        <a href="/products/san-pham-6" title="Cranberry">
-                                                            <img alt="Cranberry" data-reg="true" class="imgLoopItem" src="//product.hstatic.net/1000314614/product/upload_f1ab16ccc4e6489193361fe7c04af50c_large.jpg" style="width: auto;">
-                                                        </a>
-                                                        <ul class="link-quickview">
-                                                            <li><a href="javascript:void(0)" title="Thêm vào giỏ" class="add-to-cart" data-id="1032218092"><i class="fa fa-shopping-basket"></i></a></li>
-                                                            <li><a href="/products/san-pham-6" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
-                                                            <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="/products/san-pham-6" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
-                                                        </ul>
-
-
-                                                    </div>
-                                                    <div class="pdLoopDetail text-center clearfix">
-                                                        <h3 class="pdLoopName"><a class="productName" href="/products/san-pham-6" title="Cranberry">Cranberry </a></h3>
-                                                        <p class="pdPrice">
-
-                                                            <span>150,000₫</span>
-
-
-                                                        </p>
-                                                        <div class="pdLoopListView">
-                                                            <ul class="notStyle">
-                                                                <li><strong>Mã sản phẩm: </strong><span>chưa rõ</span></li>
-                                                                <li><strong>Thương hiệu: </strong><span>Vinamilk</span></li>
-                                                                <li><strong>Mô tả ngắn: </strong>
-                                                                    <span class="short-des">
-
-								Giá trị dinh dưỡng: &nbsp; Nho tươi cung cấp các chất dinh dưỡng, làm giảm mệt nhọc ngay lập tức. Các nghiên cứu cho thấy Nho tươi có chứa vitamin A, C, Calcium và sắt...Mã hàng:Thể loại:&nbsp;Rau, quả hữu cơ,&nbsp;Rau quả bán chạy,&nbsp;Rau, quả tốt cho người già,Rau quả có lợi cho sức khỏe,&nbsp;Rau, quả nhập khẩu,&nbsp;Rau, quả trong nước,&nbsp;Sản phẩm nổi bật,&nbsp;Sản phẩm khuyến mãi,&nbsp;Trang chủ,
-
-
-							</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-                                    <div class="itemProduct col-md-3 col-sm-6 col-xs-6">
-
-
-
-
-
-
-
-                                        <div class="pdLoopItem animated zoomIn">
-                                            <div class="itemLoop clearfix">
-                                                <div class="ct-box-op">
-                                                    <div class="pdLoopImg elementFixHeight">
-                                                        <a href="/products/san-pham-7" title="Đào tiên Úc">
-                                                            <img alt="Đào tiên Úc" data-reg="true" class="imgLoopItem" src="//product.hstatic.net/1000314614/product/upload_f1657dbe94444faba6930f58ace06cea_large.jpg" style="width: auto;">
-                                                        </a>
-                                                        <ul class="link-quickview">
-                                                            <li><a href="javascript:void(0)" title="Thêm vào giỏ" class="add-to-cart" data-id="1032218093"><i class="fa fa-shopping-basket"></i></a></li>
-                                                            <li><a href="/products/san-pham-7" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
-                                                            <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="/products/san-pham-7" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
-                                                        </ul>
-
-
-                                                    </div>
-                                                    <div class="pdLoopDetail text-center clearfix">
-                                                        <h3 class="pdLoopName"><a class="productName" href="/products/san-pham-7" title="Đào tiên Úc">Đào tiên Úc </a></h3>
-                                                        <p class="pdPrice">
-
-                                                            <span>15,000,000₫</span>
-
-
-                                                        </p>
-                                                        <div class="pdLoopListView">
-                                                            <ul class="notStyle">
-                                                                <li><strong>Mã sản phẩm: </strong><span>434</span></li>
-                                                                <li><strong>Thương hiệu: </strong><span>Emart</span></li>
-                                                                <li><strong>Mô tả ngắn: </strong>
-                                                                    <span class="short-des">
-
-								Giá trị dinh dưỡng: &nbsp; Nho tươi cung cấp các chất dinh dưỡng, làm giảm mệt nhọc ngay lập tức. Các nghiên cứu cho thấy Nho tươi có chứa vitamin A, C, Calcium và sắt...Mã hàng:Thể loại:&nbsp;Rau, quả hữu cơ,&nbsp;Rau quả bán chạy,&nbsp;Rau, quả nhập khẩu,&nbsp;Rau, quả trong nước,&nbsp;Sản phẩm khuyến mãi,&nbsp;Trang chủ,
-
-
-							</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-                                    <div class="itemProduct col-md-3 col-sm-6 col-xs-6">
-
-
-
-
-
-
-
-                                        <div class="pdLoopItem animated zoomIn">
-                                            <div class="itemLoop clearfix">
-                                                <div class="ct-box-op">
-                                                    <div class="pdLoopImg elementFixHeight">
-                                                        <a href="/products/khoai-mon" title="Khoai môn">
-                                                            <img alt="Khoai môn" data-reg="true" class="imgLoopItem" src="//product.hstatic.net/1000314614/product/upload_02a60bf9367949d38cd6ff8c80b77eb8_large.jpg" style="width: auto;">
-                                                        </a>
-                                                        <ul class="link-quickview">
-                                                            <li><a href="javascript:void(0)" title="Thêm vào giỏ" class="add-to-cart" data-id="1032218080"><i class="fa fa-shopping-basket"></i></a></li>
-                                                            <li><a href="/products/khoai-mon" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
-                                                            <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="/products/khoai-mon" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
-                                                        </ul>
-
-
-                                                    </div>
-                                                    <div class="pdLoopDetail text-center clearfix">
-                                                        <h3 class="pdLoopName"><a class="productName" href="/products/khoai-mon" title="Khoai môn">Khoai môn </a></h3>
-                                                        <p class="pdPrice">
-
-                                                            <span>23,000₫</span>
-
-
-                                                        </p>
-                                                        <div class="pdLoopListView">
-                                                            <ul class="notStyle">
-                                                                <li><strong>Mã sản phẩm: </strong><span>chưa rõ</span></li>
-                                                                <li><strong>Thương hiệu: </strong><span>Khác</span></li>
-                                                                <li><strong>Mô tả ngắn: </strong>
-                                                                    <span class="short-des">
-
-								Giá trị dinh dưỡng: &nbsp; Nho tươi cung cấp các chất dinh dưỡng, làm giảm mệt nhọc ngay lập tức. Các nghiên cứu cho thấy Nho tươi có chứa vitamin A, C, Calcium và sắt...Mã hàng:Thể loại:&nbsp;Rau, quả hữu cơ,&nbsp;Rau quả bán chạy,&nbsp;Rau, quả tốt cho người già,Rau quả có lợi cho sức khỏe,&nbsp;Rau, quả nhập khẩu,&nbsp;Rau, quả trong nước,&nbsp;Sản phẩm nổi bật,&nbsp;Trang chủ,
-
-
-							</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-                                    <div class="itemProduct col-md-3 col-sm-6 col-xs-6">
-
-
-
-
-
-
-
-                                        <div class="pdLoopItem animated zoomIn">
-                                            <div class="itemLoop clearfix">
-                                                <div class="ct-box-op">
-                                                    <div class="pdLoopImg elementFixHeight">
-                                                        <a href="/products/ot-chuong-vang" title="Ớt chuông vàng">
-                                                            <img alt="Ớt chuông vàng" data-reg="true" class="imgLoopItem" src="//product.hstatic.net/1000314614/product/upload_f9bb326578de4576b90b277641b6fe25_large.jpg" style="width: auto;">
-                                                        </a>
-                                                        <ul class="link-quickview">
-                                                            <li><a href="javascript:void(0)" title="Thêm vào giỏ" class="add-to-cart" data-id="1032218084"><i class="fa fa-shopping-basket"></i></a></li>
-                                                            <li><a href="/products/ot-chuong-vang" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
-                                                            <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="/products/ot-chuong-vang" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
-                                                        </ul>
-
-
-                                                    </div>
-                                                    <div class="pdLoopDetail text-center clearfix">
-                                                        <h3 class="pdLoopName"><a class="productName" href="/products/ot-chuong-vang" title="Ớt chuông vàng">Ớt chuông vàng </a></h3>
-                                                        <p class="pdPrice">
-
-                                                            <span>70,000₫</span>
-
-
-                                                        </p>
-                                                        <div class="pdLoopListView">
-                                                            <ul class="notStyle">
-                                                                <li><strong>Mã sản phẩm: </strong><span>chưa rõ</span></li>
-                                                                <li><strong>Thương hiệu: </strong><span>Khác</span></li>
-                                                                <li><strong>Mô tả ngắn: </strong>
-                                                                    <span class="short-des">
-
-								Giá trị dinh dưỡng: &nbsp; Nho tươi cung cấp các chất dinh dưỡng, làm giảm mệt nhọc ngay lập tức. Các nghiên cứu cho thấy Nho tươi có chứa vitamin A, C, Calcium và sắt...Mã hàng:Thể loại:&nbsp;Rau, quả hữu cơ,&nbsp;Rau quả bán chạy,&nbsp;Rau, quả tốt cho người già,Rau quả có lợi cho sức khỏe,&nbsp;Rau, quả nhập khẩu,&nbsp;Rau, quả trong nước,&nbsp;Sản phẩm nổi bật,&nbsp;Trang chủ,
-
-
-							</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-                                    <div class="itemProduct col-md-3 col-sm-6 col-xs-6">
-
-
-
-
-
-
-
-                                        <div class="pdLoopItem animated zoomIn">
-                                            <div class="itemLoop clearfix">
-                                                <div class="ct-box-op">
-                                                    <div class="pdLoopImg elementFixHeight">
-                                                        <a href="/products/ot-sung" title="Ớt sừng">
-                                                            <img alt="Ớt sừng" data-reg="true" class="imgLoopItem" src="//product.hstatic.net/1000314614/product/upload_6b86e5ff4c8e45c6ad681be8c99fb72a_large.jpg" style="width: auto;">
-                                                        </a>
-                                                        <ul class="link-quickview">
-                                                            <li><a href="javascript:void(0)" title="Thêm vào giỏ" class="add-to-cart" data-id="1032218085"><i class="fa fa-shopping-basket"></i></a></li>
-                                                            <li><a href="/products/ot-sung" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
-                                                            <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="/products/ot-sung" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
-                                                        </ul>
-
-
-                                                    </div>
-                                                    <div class="pdLoopDetail text-center clearfix">
-                                                        <h3 class="pdLoopName"><a class="productName" href="/products/ot-sung" title="Ớt sừng">Ớt sừng </a></h3>
-                                                        <p class="pdPrice">
-
-                                                            <span>60,000₫</span>
-
-
-                                                        </p>
-                                                        <div class="pdLoopListView">
-                                                            <ul class="notStyle">
-                                                                <li><strong>Mã sản phẩm: </strong><span>chưa rõ</span></li>
-                                                                <li><strong>Thương hiệu: </strong><span>Khác</span></li>
-                                                                <li><strong>Mô tả ngắn: </strong>
-                                                                    <span class="short-des">
-
-								Giá trị dinh dưỡng: &nbsp; Nho tươi cung cấp các chất dinh dưỡng, làm giảm mệt nhọc ngay lập tức. Các nghiên cứu cho thấy Nho tươi có chứa vitamin A, C, Calcium và sắt...Mã hàng:Thể loại:&nbsp;Rau, quả hữu cơ,&nbsp;Rau quả bán chạy,&nbsp;Rau, quả tốt cho người già,Rau quả có lợi cho sức khỏe,&nbsp;Rau, quả nhập khẩu,&nbsp;Rau, quả trong nước,&nbsp;Sản phẩm nổi bật,&nbsp;Trang chủ,
-
-
-							</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-                                    <div class="itemProduct col-md-3 col-sm-6 col-xs-6">
-
-
-
-
-
-
-
-                                        <div class="pdLoopItem animated zoomIn">
-                                            <div class="itemLoop clearfix">
-                                                <div class="ct-box-op">
-                                                    <div class="pdLoopImg elementFixHeight">
-                                                        <a href="/products/su-su-non" title="Su su non">
-                                                            <img alt="Su su non" data-reg="true" class="imgLoopItem" src="//product.hstatic.net/1000314614/product/upload_1d48c719c6ac4a6d8c179f8bc5b78fcf_large.jpg" style="width: auto;">
-                                                        </a>
-                                                        <ul class="link-quickview">
-                                                            <li><a href="javascript:void(0)" title="Thêm vào giỏ" class="add-to-cart" data-id="1032218099"><i class="fa fa-shopping-basket"></i></a></li>
-                                                            <li><a href="/products/su-su-non" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
-                                                            <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="/products/su-su-non" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
-                                                        </ul>
-
-
-                                                    </div>
-                                                    <div class="pdLoopDetail text-center clearfix">
-                                                        <h3 class="pdLoopName"><a class="productName" href="/products/su-su-non" title="Su su non">Su su non </a></h3>
-                                                        <p class="pdPrice">
-
-                                                            <span>35,000₫</span>
-
-
-                                                        </p>
-                                                        <div class="pdLoopListView">
-                                                            <ul class="notStyle">
-                                                                <li><strong>Mã sản phẩm: </strong><span>chưa rõ</span></li>
-                                                                <li><strong>Thương hiệu: </strong><span>Khác</span></li>
-                                                                <li><strong>Mô tả ngắn: </strong>
-                                                                    <span class="short-des">
-
-								Giá trị dinh dưỡng: &nbsp; Nho tươi cung cấp các chất dinh dưỡng, làm giảm mệt nhọc ngay lập tức. Các nghiên cứu cho thấy Nho tươi có chứa vitamin A, C, Calcium và sắt...Mã hàng:Thể loại:&nbsp;Rau, quả hữu cơ,&nbsp;Rau quả bán chạy,&nbsp;Rau, quả tốt cho người già,Rau quả có lợi cho sức khỏe,&nbsp;Rau, quả nhập khẩu,&nbsp;Rau, quả trong nước,&nbsp;Sản phẩm nổi bật,&nbsp;Trang chủ,
-
-
-							</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-                                    <div class="itemProduct col-md-3 col-sm-6 col-xs-6">
-
-
-
-
-
-
-
-                                        <div class="pdLoopItem animated zoomIn">
-                                            <div class="itemLoop clearfix">
-                                                <div class="ct-box-op">
-                                                    <div class="pdLoopImg elementFixHeight">
-                                                        <a href="/products/sua-meiji-so-9-820g-1-3-tuoi" title="Sữa meiji số 9 820g (1 - 3 tuổi)">
-                                                            <img alt="Sữa meiji số 9 820g (1 - 3 tuổi)" data-reg="true" class="imgLoopItem" src="//product.hstatic.net/1000314614/product/upload_fb2a2b70d32449deae970477219cd687_large.jpg" style="width: auto;">
-                                                        </a>
-                                                        <ul class="link-quickview">
-                                                            <li><a href="javascript:void(0)" title="Thêm vào giỏ" class="add-to-cart" data-id="1032218103"><i class="fa fa-shopping-basket"></i></a></li>
-                                                            <li><a href="/products/sua-meiji-so-9-820g-1-3-tuoi" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
-                                                            <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="/products/sua-meiji-so-9-820g-1-3-tuoi" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
-                                                        </ul>
-
-
-                                                    </div>
-                                                    <div class="pdLoopDetail text-center clearfix">
-                                                        <h3 class="pdLoopName"><a class="productName" href="/products/sua-meiji-so-9-820g-1-3-tuoi" title="Sữa meiji số 9 820g (1 - 3 tuổi)">Sữa meiji số 9 820g (1 - 3 tuổi) </a></h3>
-                                                        <p class="pdPrice">
-
-                                                            <span>1,200,000₫</span>
-
-
-                                                        </p>
-                                                        <div class="pdLoopListView">
-                                                            <ul class="notStyle">
-                                                                <li><strong>Mã sản phẩm: </strong><span>chưa rõ</span></li>
-                                                                <li><strong>Thương hiệu: </strong><span>Khác</span></li>
-                                                                <li><strong>Mô tả ngắn: </strong>
-                                                                    <span class="short-des">
-
-								Sữa Meiji&nbsp;số 9&nbsp;820g phù hợp cho trẻ từ 1-3 tuổi, không chỉ chứa các chất dinh dưỡng cơ bản như protein, chất béo, carbohydrat mà còn có các&nbsp;vitamin&nbsp;và khoáng chất rất khó có được từ&nbsp;sữa&nbsp;mẹ,&nbsp;sữa&nbsp;bò và thức ăn dạng rắn. Meiji còn bổ sung cả axit docosahexaenoic (DHA), các nucleotides và đặc biệt là hệ chất xơ GOS hỗ trợ tiêu hóa làm nên đặc tính mát của sữa giúp thúc đẩy sự phát triển toàn diện cả về thể chất lẫn não bộ của trẻ trong suốt giai đoạn thơ ấu. Sản phẩm được dùng bổ sung cùng các...
-
-
-							</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-                                    <div class="itemProduct col-md-3 col-sm-6 col-xs-6">
-
-
-
-
-
-
-
-                                        <div class="pdLoopItem animated zoomIn">
-                                            <div class="itemLoop clearfix">
-                                                <div class="ct-box-op">
-                                                    <div class="pdLoopImg elementFixHeight">
-                                                        <a href="/products/sua-pediasure-ba-850g-1-10-tuoi" title="Sữa Pediasure ba 850g (1 - 10 tuổi)">
-                                                            <img alt="Sữa Pediasure ba 850g (1 - 10 tuổi)" data-reg="true" class="imgLoopItem" src="//product.hstatic.net/1000314614/product/upload_eaf63ab35a48414f9329bd930afc468f_large.jpg" style="width: auto;">
-                                                        </a>
-                                                        <ul class="link-quickview">
-                                                            <li><a href="javascript:void(0)" title="Thêm vào giỏ" class="add-to-cart" data-id="1032218105"><i class="fa fa-shopping-basket"></i></a></li>
-                                                            <li><a href="/products/sua-pediasure-ba-850g-1-10-tuoi" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
-                                                            <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="/products/sua-pediasure-ba-850g-1-10-tuoi" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
-                                                        </ul>
-
-
-                                                    </div>
-                                                    <div class="pdLoopDetail text-center clearfix">
-                                                        <h3 class="pdLoopName"><a class="productName" href="/products/sua-pediasure-ba-850g-1-10-tuoi" title="Sữa Pediasure ba 850g (1 - 10 tuổi)">Sữa Pediasure ba 850g (1 - 10 tuổi) </a></h3>
-                                                        <p class="pdPrice">
-
-                                                            <span>1,000,000₫</span>
-
-
-                                                        </p>
-                                                        <div class="pdLoopListView">
-                                                            <ul class="notStyle">
-                                                                <li><strong>Mã sản phẩm: </strong><span>chưa rõ</span></li>
-                                                                <li><strong>Thương hiệu: </strong><span>Khác</span></li>
-                                                                <li><strong>Mô tả ngắn: </strong>
-                                                                    <span class="short-des">
-
-								Sữa PediaSure&nbsp;BA&nbsp;là sản phẩm dinh dưỡng dùng bổ sung hoặc thay thế hoàn toàn bữa ăn của trẻ 1-10 tuổi, được đặc chế khoa học để cung cấp nguồn dinh dưỡng đầy đủ và cân đối, giúp thay thế và bổ sung kịp thời sự thiếu hụt của bữa ăn, cho trẻ khỏe mạnh và phát triển tốt, không bị suy dinh dưỡng hoặc béo phì, đặc biệt tốt khi dùng thường xuyên và lâu dài cho trẻ.&nbsp;Sữa&nbsp;đặc biệt phù hợp cho các bé biếng ăn, giúp trẻ nhanh chóng bắt kịp và tiếp tục đà tăng trưởng tối ưu...
-
-
-							</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-
+                                    <?php echo $dataList ?>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -779,67 +193,13 @@ use Jenssegers\Agent\Agent;
                     itemWidth: 75,
                     itemMargin: 10,
                 });
-                $('.add-to-c').click(function(e){
-                    e.preventDefault();
-                    var params = {
-                        type: 'POST',
-                        url: '/cart/add.js',
-                        data: $('#form-pro').serialize(),
-                        dataType: 'json',
-                        success: function(result) {
-                            //alert('Bạn đã thêm' + ' ' + result.product_title + ' ' + 'vào giỏ hàng thành công !');
-                            $.ajax({url: "/cart/?view=view", success: function(result){
-                                    $(".cart-header").html(result);
-                                }});			},
-                        error: function(XMLHttpRequest, textStatus) {
-                            //Haravan.onError(XMLHttpRequest, textStatus);
-                            alert(XMLHttpRequest.responseJSON.description = 'Bạn không thể đặt quá số lượng tồn kho!');
-
-                        }
-                    };
-                    jQuery.ajax(params);
-                    var cart = $('.icon-cart');
-                    var imgtodrag = $(this).parents('.pro-content').find(".slides img").eq(0);
-                    if (imgtodrag) {
-                        var imgclone = imgtodrag.clone()
-                            .offset({
-                                top: imgtodrag.offset().top,
-                                left: imgtodrag.offset().left
-                            })
-                            .css({
-                                'opacity': '0.5',
-                                'position': 'absolute',
-                                'height': '150px',
-                                'width': '150px',
-                                'z-index': '9999999'
-                            })
-                            .appendTo($('body'))
-                            .animate({
-                                'top': cart.offset().top + 2,
-                                'left': cart.offset().left + 2,
-                                'width': 35,
-                                'height': 35
-                            }, 1000, 'easeInOutExpo');
-
-                        setTimeout(function () {
-
-                        }, 1500);
-
-                        imgclone.animate({
-                            'width': 0,
-                            'height': 0
-                        }, function () {
-                            $(this).detach()
-                        });
-                    }
-                });
                 $(".product-thumb a").click(function(e){
                     e.preventDefault();
                     $(".product-thumb").removeClass('checked');
                     $(this).parent().addClass('checked');
                     $(".product-image-feature").attr("src",$(this).attr("data-image"));
                 });
-                if($(window).width() > 960){
+                if($(window).width() > 260){
                     jQuery(".product-image-feature").elevateZoom({
                         gallery:'carousel',
                         scrollZoom : true
@@ -848,218 +208,7 @@ use Jenssegers\Agent\Agent;
             });
 
         </script>
-        <script>
-            var swatch_size = parseInt($('.select-swatch').children().size());
-            jQuery(document).on('click','.swatch input', function(e) {
-                e.preventDefault()
-                var $this = $(this);
-                var _available = '';
-                $this.parent().siblings().find('label').removeClass('sd');
-                $this.next().addClass('sd');
-                var name = $this.attr('name');
-                var value = $this.val();
 
-                $('select[data-option='+name+']').val(value).trigger('change');
-
-                if(swatch_size == 2){
-                    if(name.indexOf('1') != -1){
-                        $('#variant-swatch-1 .swatch-element').find('input').prop('disabled', false);
-                        $('#variant-swatch-2 .swatch-element').find('input').prop('disabled', false);
-                        $('#variant-swatch-1 .swatch-element label').removeClass('sd');
-                        $('#variant-swatch-1 .swatch-element').removeClass('soldout');
-                        $('.selector-wrapper .single-option-selector').eq(1).find('option').each(function(){
-                            var _tam = $(this).val();
-                            $(this).parent().val(_tam).trigger('change');
-
-                            if(check_variant){
-                                if(_available == '' ){
-                                    _available = _tam;
-                                }
-                            }else{
-                                $('#variant-swatch-1 .swatch-element[data-value="'+_tam+'"]').addClass('soldout');
-                                $('#variant-swatch-1 .swatch-element[data-value="'+_tam+'"]').find('input').prop('disabled', true);
-                            }
-                        })
-                        $('.selector-wrapper .single-option-selector').eq(1).val(_available).trigger('change');
-                        $('#variant-swatch-1 .swatch-element[data-value="'+_available+'"] label').addClass('sd');
-                    }
-                }else if (swatch_size == 3){
-
-                    var _count_op2 = $('#variant-swatch-1 .swatch-element').size();
-                    var _count_op3 = $('#variant-swatch-2 .swatch-element').size();
-                    if(name.indexOf('1') != -1){
-                        $('#variant-swatch-1 .swatch-element').find('input').prop('disabled', false);
-                        $('#variant-swatch-2 .swatch-element').find('input').prop('disabled', false);
-                        $('#variant-swatch-1 .swatch-element label').removeClass('sd');
-                        $('#variant-swatch-1 .swatch-element').removeClass('soldout');
-                        $('#variant-swatch-2 .swatch-element label').removeClass('sd');
-                        $('#variant-swatch-2 .swatch-element').removeClass('soldout');
-                        var _avi_op1 = '';
-                        var _avi_op2 = '';
-                        $('#variant-swatch-1 .swatch-element').each(function(ind,value){
-                            var _key = $(this).data('value');
-                            var _unavi = 0;
-                            $('.single-option-selector').eq(1).val(_key).change();
-                            $('#variant-swatch-2 .swatch-element label').removeClass('sd');
-                            $('#variant-swatch-2 .swatch-element').removeClass('soldout');
-                            $('#variant-swatch-2 .swatch-element').find('input').prop('disabled', false);
-                            $('#variant-swatch-2 .swatch-element').each(function(i,v){
-                                var _val = $(this).data('value');
-                                $('.single-option-selector').eq(2).val(_val).change();
-                                if(check_variant == true){
-                                    if(_avi_op1 == ''){
-                                        _avi_op1 = _key;
-                                    }
-                                    if(_avi_op2 == ''){
-                                        _avi_op2 = _val;
-                                    }
-                                    console.log(_avi_op1 + ' -- ' + _avi_op2)
-                                }else{
-                                    _unavi += 1;
-                                }
-                            })
-                            if(_unavi == _count_op3){
-                                $('#variant-swatch-1 .swatch-element[data-value = "'+_key+'"]').addClass('soldout');
-                                setTimeout(function(){
-                                    $('#variant-swatch-1 .swatch-element[data-value = "'+_key+'"] input').attr('disabled','disabled');
-                                })
-                            }
-                        })
-
-
-                        $('#variant-swatch-1 .swatch-element[data-value="'+_avi_op1+'"] input').click();
-                    }
-                    else if(name.indexOf('2') != -1){
-                        $('#variant-swatch-2 .swatch-element label').removeClass('sd');
-                        $('#variant-swatch-2 .swatch-element').removeClass('soldout');
-                        $('.selector-wrapper .single-option-selector').eq(2).find('option').each(function(){
-                            var _tam = $(this).val();
-                            $(this).parent().val(_tam).trigger('change');
-                            if(check_variant){
-                                if(_available == '' ){
-                                    _available = _tam;
-                                }
-                            }else{
-
-                                $('#variant-swatch-2 .swatch-element[data-value="'+_tam+'"]').addClass('soldout');
-                                $('#variant-swatch-2 .swatch-element[data-value="'+_tam+'"]').find('input').prop('disabled', true);
-                            }
-                        })
-
-                        $('.selector-wrapper .single-option-selector').eq(2).val(_available).trigger('change');
-                        $('#variant-swatch-2 .swatch-element[data-value="'+_available+'"] label').addClass('sd');
-                    }
-                }else{
-
-                }
-            })
-            $(document).ready(function(){
-
-
-                var _chage = '';
-
-                $('.swatch-element[data-value="'+$('.selector-wrapper .single-option-selector').eq(0).val()+'"]').find('input').click();
-                $('.swatch-element[data-value="'+$('.selector-wrapper .single-option-selector').eq(1).val()+'"]').find('input').click();
-
-                if(swatch_size == 2){
-                    var _avi_op1 = '';
-                    var _avi_op2 = '';
-                    var _count = $('#variant-swatch-1 .swatch-element').size();
-                    $('#variant-swatch-0 .swatch-element').each(function(ind,value){
-                        var _key = $(this).data('value');
-
-                        var _unavi = 0;
-                        //$('.single-option-selector').eq(0).val(_key).change();
-
-                        $('#variant-swatch-1 .swatch-element').each(function(i,v){
-                            var _val = $(this).data('value');
-
-                            $('.single-option-selector').eq(1).val(_val).change();
-                            if(check_variant == true){
-                                if(_avi_op1 == ''){
-                                    _avi_op1 = _key;
-                                }
-                                if(_avi_op2 == ''){
-                                    _avi_op2 = _val;
-                                }
-                            }else{
-                                _unavi += 1;
-                            }
-
-                        })
-                        if(_unavi == _count){
-
-                            $('#variant-swatch-0 .swatch-element[data-value = "'+_key+'"]').addClass('soldout');
-                            $('#variant-swatch-0 .swatch-element[data-value = "'+_key+'"]').find('input').attr('disabled','disabled');
-                        }
-                    })
-
-
-
-                    $('#variant-swatch-0 .swatch-element[data-value = "'+_avi_op1+'"] input').click();
-                    $('#variant-swatch-1 .swatch-element[data-value = "'+_avi_op2+'"] input').click();
-
-                }else if(swatch_size == 3){
-
-                    var _avi_op1 = '';
-                    var _avi_op2 = '';
-                    var _avi_op3 = '';
-
-                    var _size_op2 = $('#variant-swatch-1 .swatch-element').size();
-
-
-                    var _size_op3 = $('#variant-swatch-2 .swatch-element').size();
-
-
-                    $('#variant-swatch-0 .swatch-element').each(function(ind,value){
-                        var _key_va1 = $(this).data('value');
-                        var _count_unavi = 0;
-
-                        $('.single-option-selector').eq(0).val(_key_va1).change();
-                        $('#variant-swatch-1 .swatch-element').each(function(i,v){
-
-
-                            var _key_va2 = $(this).data('value');
-                            var _unavi_2 = 0;
-                            $('.single-option-selector').eq(1).val(_key_va2).change();
-                            $('#variant-swatch-2 .swatch-element').each(function(j,z){
-                                var _key_va3 = $(this).data('value');
-
-                                $('.single-option-selector').eq(2).val(_key_va3).change();
-                                if(check_variant == true){
-                                    if(_avi_op1 == ''){
-                                        _avi_op1 = _key_va1;
-
-                                    }
-                                    if(_avi_op2 == ''){
-                                        _avi_op2 = _key_va2;
-                                    }
-                                    if(_avi_op3 == ''){
-                                        _avi_op3 = _key_va3;
-                                    }
-                                }else{
-
-                                    _unavi_2 += 1;
-                                }
-                            })
-                            if(_unavi_2 == _size_op3){
-                                _count_unavi += 1;
-                            }
-                        })
-                        if(_size_op2 == _count_unavi){
-
-                            $('#variant-swatch-0 .swatch-element[data-value = "'+_key_va1+'"]').addClass('soldout');
-                            $('#variant-swatch-0 .swatch-element[data-value = "'+_key_va1+'"]').find('input').attr('disabled','disabled');
-                        }
-                    })
-
-                    $('#variant-swatch-0 .swatch-element[data-value = "'+_avi_op1+'"] input').click();
-
-                }
-
-
-            })
-        </script>
         <style>
             label[for] {
                 cursor: pointer;
@@ -1115,18 +264,8 @@ use Jenssegers\Agent\Agent;
                                         <div class="m-tt">
                                         </div>
                                     </div>
-                                    <div class="p-option-wrapper">
-                                        <select name="id" class="" id="p-select"></select>
-                                    </div>
-
-                                    <div class="form-input ">
-                                        <label>Số lượng</label>
-                                        <input name="quantity" type="number" min="1" value="1" />
-                                    </div>
-
                                     <div class="form-input" style="width: 100%">
-                                        <button type="button" class="btn-addcart">Thêm vào giỏ</button>
-                                        <button disabled class="btn-detail addtocart btn-color-add btn-min-width btn-mgt btn-soldout">Hết hàng</button>
+                                        <button type="button" class="btn-addcart-modal">Liên hệ Đặt hàng: {{env("PHONE")}}</button>
                                         <div class="qv-readmore">
                                             <span> hoặc </span><a class="read-more p-url" href="#" role="button">Xem chi tiết</a>
                                         </div>
@@ -1147,6 +286,110 @@ use Jenssegers\Agent\Agent;
 
             if ($(window).width() < 680) { window.location = purl; return false; }
             modal = $('#quick-view-modal'); modal.modal('show');
+            $.ajax({
+                url: '/chi-tiet-san-pham',
+                async: false,
+                method: "POST",
+                dataType: "Json",
+                data: {id: purl},
+                success: function (product) {
+                    if(!product.success) {
+                        alert(product.message);
+                        return false;
+                    }
+                    modal.find('.p-title').html('<h1>' + product.data.title + '</h1>');
+                    if(product.data.supplier) {
+                        modal.find('.m-vendor').removeClass('hidden');
+                        modal.find('.m-vendor').html('<span>Nhà cung cấp: </span>'+ product.data.supplier);
+                    }else{
+                        modal.find('.m-vendor').addClass('hidden');
+                    }
+                    modal.find('.p-price').html(formatNumber(product.data.price) + 'đ');
+                    modal.find('.m-sku').html('<span>Mã sản phẩm: </span>YEN-'+ product.data.id);
+
+
+                    var productdes = product.data.short_content;
+                    if(productdes != '' && productdes != null){
+                        var re_productdes = productdes.replace(/(<([^>]+)>)/ig,"")
+                        var des = re_productdes.split("&nbsp;").splice(0, 50).join(" ") + "...";
+                        modal.find('.form-des').html(des);
+                        modal.find('.form-des').show();
+                    }else{
+                        modal.find('.form-des').html('Chưa có mô tả cho sản phẩm này!');
+                    }
+                    $('.image-zoom').html(p_zoom);
+                    modal.find('.p-url').attr('href', '/san-pham/' + product.data.slug + '.html');
+                    var img_slider = [];
+                    if(product.data.gallery_image){
+                        img_slider = JSON.parse(product.data.gallery_image);
+                        img_slider.unshift(product.data.image);
+                    }else{
+                        img_slider.push(product.data.image);
+                    }
+                    $('#p-sliderproduct').remove();
+                    $('.image-zoom').append("<div id='p-sliderproduct' class='owl_pages '>");
+                    $('#p-sliderproduct').append("<ul class='slides owlDesign notStyle'>");
+                    $('#p-sliderproduct .slides').hide();
+                    $.each(img_slider, function (i, v) {
+                        var img_item = get_bp_image(v, 'tmb');
+                        elem = $('<li class="product-thumb">').append('<a href="#" data-image="" data-zoom-image=""><img /></a>');
+                        elem.find('a').attr('data-image', img_item);
+                        elem.find('a').attr('data-zoom-image', img_item);
+                        elem.find('img').attr('data-image', img_item);
+                        elem.find('img').attr('data-zoom-image',img_item);
+                        elem.find('img').attr('src', img_item);
+                        modal.find('.slides').append(elem);
+                    });
+
+                    modal.find('.p-product-image-feature').attr('src', get_bp_image(product.data.image, 'tmb'));
+                    var iflag = 0;
+                    $('#p-sliderproduct img').load(function () {
+                        iflag++;
+                        if (iflag == $('#p-sliderproduct img').length) {
+                            setTimeout(function(){
+                                var owl = $('#p-sliderproduct .slides');
+                                owl.on('initialize.owl.carousel initialized.owl.carousel ' +
+                                    'initialize.owl.carousel initialize.owl.carousel ' +
+                                    'resize.owl.carousel resized.owl.carousel ' +
+                                    'refresh.owl.carousel refreshed.owl.carousel ' +
+                                    'update.owl.carousel updated.owl.carousel ' +
+                                    'drag.owl.carousel dragged.owl.carousel ' +
+                                    'translate.owl.carousel translated.owl.carousel ' +
+                                    'to.owl.carousel changed.owl.carousel', function(e) {
+                                    $('#p-sliderproduct .slides').show();
+                                })
+                                owl.owlCarousel({
+                                    items : 4,
+                                    loop: false,
+                                    autoplay: false,
+                                    margin: 5,
+                                    responsiveClass: true,
+                                    nav : true,
+                                    navText: ['‹' , '›'],
+                                    responsive: {
+                                        0: {
+                                            items: 1
+                                        },
+                                        370: {
+                                            items: 2
+                                        },
+                                        480: {
+                                            items: 3
+                                        },
+                                        768: {
+                                            items: 4
+                                        },
+                                        992: {
+                                            items: 4
+                                        }
+                                    }
+                                });
+                                modal.find('.owl-item:first-child .product-thumb').addClass('active');
+                            },500)
+                        }
+                    })
+                }
+            });
             return false;
         }
         $('#quick-view-modal ').on('click', '.product-thumb img', function (event) {

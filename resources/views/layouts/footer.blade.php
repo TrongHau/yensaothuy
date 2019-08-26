@@ -17,10 +17,12 @@
 
         <li><a href="/dieu-khoan-dich-vu.html">Điều khoản dịch vụ</a></li>
 
+        <li><a href="/lien-he.html">Liên Hệ</a></li>
+
     </ul>
     <div class="copyright">Hộ Kinh Doanh Yến Sào Thủy<br/>
         Showroom 114A Trịnh Phong, Phường Tân Lập, TP Nha Trang<br/>
-        Phone: 0969 933 289
+        Phone: {{env("PHONE")}}
     </div>
     <div class="copyright"></div>
 </footer>

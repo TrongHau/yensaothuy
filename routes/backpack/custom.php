@@ -13,14 +13,17 @@ Route::group([
 ], function () { // custom admin routes
     CRUD::resource('article_for_lease', 'ArticleForLeaseController');
     CRUD::resource('article_for_buy', 'ArticleForBuyController');
-    CRUD::resource('phone', 'PhoneController');
-    CRUD::resource('report', 'ReportController');
+    CRUD::resource('product', 'ProductController');
+    CRUD::resource('category_product', 'CategoryProductController');
+    CRUD::resource('contact', 'ContactController');
 
     Route::get('sync_article_new/sync_article', 'SyncArticleController@getSyncArticle');
     Route::get('sync_article_new/approval/{id}', 'SyncArticleController@approvalSyncArticle');
     Route::post('sync_article_new/sync_post_article', 'SyncArticleController@storeSyncArticle');
 
-    CRUD::resource('sync_article_new', 'SyncArticleController');
+    CRUD::resource('slider_home_show1', 'HomeSliderShow1Controller');
+    CRUD::resource('slider_home_show2', 'HomeSliderShow2Controller');
+    CRUD::resource('slider_home_show3', 'HomeSliderShow3Controller');
 
     // lấy tin batdongsan.com.vn
 
