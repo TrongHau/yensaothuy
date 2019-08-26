@@ -23,7 +23,7 @@ use App\Library\Helpers;
                     <div class="pdLoopDetail text-center clearfix">
                         <h3 class="pdLoopName"><a class="productName" href="/{{$item->slug}}-p-{{$item->id}}.html" title="{{$item->title}}">{{$item->title}} </a></h3>
                         <p class="pdPrice">
-                            <span>{{number_format($item->price)}}₫</span>
+                            <span>{{number_format($item->promotion == 1 ? $item->price_promotion : $item->price)}}₫</span>
                         </p>
                         <div class="pdLoopListView">
                             <ul class="notStyle">

@@ -81,7 +81,7 @@ Yến Trắng Rút Lông, Yến Chân Rút Lông, Yến Hồng Huyết Tinh Ch�
 
                                 <div class="price pdPrice">
 
-                                    <span id="pro-price"><span>{{number_format($prod->price)}}₫</span></span>
+                                    <span id="pro-price"><span>{{number_format($item->promotion == 1 ? $item->price_promotion : $item->price)}}₫</span></span>
 
 
                                 </div>
@@ -304,7 +304,7 @@ Yến Trắng Rút Lông, Yến Chân Rút Lông, Yến Hồng Huyết Tinh Ch�
                     }else{
                         modal.find('.m-vendor').addClass('hidden');
                     }
-                    modal.find('.p-price').html(formatNumber(product.data.price) + 'đ');
+                    modal.find('.p-price').html(formatNumber(product.data.promotion == 1 ? product.data.price_promotion : product.data.price) + 'đ');
                     modal.find('.m-sku').html('<span>Mã sản phẩm: </span>YEN-'+ product.data.id);
 
 

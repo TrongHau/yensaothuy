@@ -72,6 +72,12 @@ class ProductController extends CrudController
         $this->crud->addColumn([
             'name' => 'price',
             'label' => 'Giá',
+            'type' => 'number'
+        ]);
+        $this->crud->addColumn([
+            'name' => 'price_promotion',
+            'label' => 'Giá KM',
+            'type' => 'number'
         ]);
         $this->crud->addColumn([
             'name' => 'status',
@@ -135,7 +141,7 @@ class ProductController extends CrudController
             ],
         ]);
         $this->crud->addField([
-            'name' => 'price_featured',
+            'name' => 'price_promotion',
             'label' => 'Giá Khuyến mãi (vnđ)',
             'type' => 'number',
             'wrapperAttributes' => [
