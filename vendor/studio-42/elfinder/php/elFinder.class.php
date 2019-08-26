@@ -2286,7 +2286,6 @@ class elFinder
 
         foreach ($targets as $target) {
             elFinder::checkAborted();
-
             if (($volume = $this->volume($target)) == false) {
                 $result['warning'] = $this->error(self::ERROR_RM, '#' . $target, self::ERROR_FILE_NOT_FOUND);
                 break;
@@ -2297,7 +2296,6 @@ class elFinder
                 $result['warning'] = $this->error(self::ERROR_LOCKED, $rm['name']);
                 break;
             }
-
             if (!$volume->rm($target)) {
                 $result['warning'] = $this->error($volume->error());
                 break;

@@ -986,7 +986,6 @@ class elFinderVolumeBox extends elFinderVolumeDriver
         $stat['realpath'] = $path;
         $this->rmTmb($stat);
         $this->clearcache();
-
         if (empty($stat)) {
             return $this->setError(elFinder::ERROR_RM, $this->_path($path), elFinder::ERROR_FILE_NOT_FOUND);
         }

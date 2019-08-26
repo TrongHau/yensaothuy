@@ -5248,7 +5248,6 @@ abstract class elFinderVolumeDriver
         if (!$force && !empty($stat['locked'])) {
             return $this->setError(elFinder::ERROR_LOCKED, $this->path($stat['hash']));
         }
-
         if ($stat['mime'] == 'directory' && empty($stat['thash'])) {
             $ret = $this->delTree($this->convEncIn($path));
             $this->convEncOut();
@@ -5256,12 +5255,13 @@ abstract class elFinderVolumeDriver
                 return $this->setError(elFinder::ERROR_RM, $this->path($stat['hash']));
             }
         } else {
+            $name = explode('\\', $path);
             if ($this->convEncOut(!$this->_unlink($this->convEncIn($path)))) {
                 return $this->setError(elFinder::ERROR_RM, $this->path($stat['hash']));
             }
+            $this->_unlink($this->root.'\\.tmb\\'.last($name));
             $this->clearstatcache();
         }
-
         $this->removed[] = $stat;
         return true;
     }
