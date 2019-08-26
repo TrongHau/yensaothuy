@@ -21,9 +21,9 @@ $titleMeta = $prod->title. ' - Yến Sào Thủy';
     <meta name="keywords" content="Yến Sào Thủy, Yến Nhà, Yến Đảo, Yến hũ chưng thủ công, Yến Nguyên Tổ Sơ Chế, Yến Tinh Chế, Yến Trắng Nguyên Tổ  Sơ Chế Còn Lông, Huyết Yến Nguyên Tổ Sơ Chế Còn Lông,Yến Vụn, Yến Sợi Tinh Chế Loại 1, Yến Sợi Tinh Chế Đặc Biệt, Yến Sợi Tinh Chế Cao Cấp
 Yến Trắng Rút Lông, Yến Chân Rút Lông, Yến Hồng Huyết Tinh Chế, Yến Hồng Vàng Tinh Chế, Yến Hồng Rút Lông, Yến Hồng Rút Lông, Yến Chân Hồng Huyết, Yến Đảo Nguyên Tổ Sơ Chế Còn Lông, Yến Đảo Tinh Chế, Yến hũ Chưng Sẵn Sợi Vụn, Yến hũ Chưng Sẵn Sợi Tinh Chế, Yến hũ Chưng Sẵn Chân Tổ, Yến hũ Chưng Sẵn Sợi Hồng Huyết">
     <link rel="canonical" href="{{url()->current()}}" />
-    <link rel="image_src" href="{{env('APP_URL') . THUMBNAIL_DEFAULT_META}}" />
+    <link rel="image_src" href="{{env('APP_URL') . $img_f}}" />
     <meta name="title" content="{{$prod->title}} - Yến Sào Thủy" />
-    <meta property="og:image" content="{{env('APP_URL') . THUMBNAIL_DEFAULT_META}}" />
+    <meta property="og:image" content="{{env('APP_URL') . $img_f}}" />
     <meta property="og:url" content="{{url()->current()}}" />
     <meta property="og:title" content="{{$prod->title}} - Yến Sào Thủy" />
     <meta name="description" content="Yến Sào Thủy, Yến Nhà, Yến Đảo, Yến hũ chưng thủ công, Yến Nguyên Tổ Sơ Chế, Yến Tinh Chế, Yến Trắng Nguyên Tổ  Sơ Chế Còn Lông, Huyết Yến Nguyên Tổ Sơ Chế Còn Lông,Yến Vụn, Yến Sợi Tinh Chế Loại 1, Yến Sợi Tinh Chế Đặc Biệt, Yến Sợi Tinh Chế Cao Cấp
@@ -81,7 +81,7 @@ Yến Trắng Rút Lông, Yến Chân Rút Lông, Yến Hồng Huyết Tinh Ch�
 
                                 <div class="price pdPrice">
 
-                                    <span id="pro-price"><span>{{number_format($item->promotion == 1 ? $item->price_promotion : $item->price)}}₫</span></span>
+                                    <span id="pro-price"><span>{{number_format($prod->promotion == 1 ? $prod->price_promotion : $prod->price)}}₫</span></span>
 
 
                                 </div>
