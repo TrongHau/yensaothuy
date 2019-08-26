@@ -471,7 +471,7 @@ use Jenssegers\Agent\Agent;
                                 <div class="col-lg-5 col-md-6">
                                     <div class="image-zoom row">
 
-                                        <img class="p-product-image-feature" src="#">
+                                        <img class="p-product-image-feature" src="/">
                                         <div id="p-sliderproduct" class="owl_pages ">
                                             <ul class="slides"></ul>
                                         </div>
