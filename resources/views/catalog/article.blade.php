@@ -5,7 +5,6 @@ $titleMeta = 'Tin Tức - Yến Sào Thủy';
 ?>
 
 @section('meta')
-    <base href="{{env('APP_URL')}}">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta name="author" content="Yen sao thuy">

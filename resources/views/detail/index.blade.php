@@ -12,7 +12,6 @@ $titleMeta = $prod->title. ' - Yến Sào Thủy';
 ?>
 
 @section('meta')
-    <base href="{{env('APP_URL')}}">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta name="author" content="Yen sao thuy">
@@ -236,7 +235,7 @@ Yến Trắng Rút Lông, Yến Chân Rút Lông, Yến Hồng Huyết Tinh Ch�
                                 <div class="col-lg-5 col-md-6">
                                     <div class="image-zoom row">
 
-                                        <img class="p-product-image-feature" src="#">
+                                        <img class="p-product-image-feature" src="/">
                                         <div id="p-sliderproduct" class="owl_pages ">
                                             <ul class="slides"></ul>
                                         </div>
