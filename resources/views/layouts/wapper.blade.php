@@ -2,19 +2,6 @@
     <div class="btn-top-header"><i class="fa fa-ellipsis-v"></i></div>
     <div class="top-header-v2">
         <div class="container">
-            <div class="left-th-v2">
-                <ul>
-
-
-
-
-                    <li><a href="/account/register" title="Đăng ký"> Đăng ký</a></li>
-
-                    <li><a href="/account/login"> Đăng nhập</a></li>
-
-
-                </ul>
-            </div>
             <div class="right-th-v2 hidden-xs hidden-sm">
 
                 <ul class="lag-v2 ">
