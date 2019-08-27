@@ -2,6 +2,11 @@
 <head>
     <link rel="shortcut icon" href="/image/favicon7d0b.png?v=140" type="image/png" />
     <meta charset="utf-8" />
+    <meta name="revisit-after" content="1 day" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0' name='viewport' />
     <title>{{ $titleMeta or Config::get('constants.app.title') }}</title>
     <script src='/js/jquery-1.11.1.js?v=140' type='text/javascript'></script>
     <script src='/js/functions.js' type='text/javascript'></script>
