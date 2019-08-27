@@ -7362,4 +7362,12 @@ input.ajaxcart__qty-num {
 		font-size: 12px;
 	}
 }
+
+.liMenu .fa-angle-down {
+	width: 30px;
+	height: 30px;
+	text-align: right;
+}
+
+
 /* -------------------------------------- END CART PAGE --------------------------- */
