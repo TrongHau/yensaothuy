@@ -77,8 +77,8 @@ class Handler extends ExceptionHandler
                 }
                 return response()->view('errors.403', ['message'=> $exception->getMessage()], 403);
             }elseif ($exception->getStatusCode() == 404) {
-//                if($request->format() == 'html')
-//                    return redirect()->guest('/');
+                if($request->format() == 'html')
+                    return response()->make($exception->getMessage(), 404);
                 Helpers::ajaxResult(false, 'Truy cập trang web không tồn tại.', null);
             }
         }

@@ -10,18 +10,18 @@ use App\Library\Helpers;
             <div class="itemLoop clearfix">
                 <div class="ct-box-op">
                     <div class="pdLoopImg elementFixHeight">
-                        <a href="/{{$item->slug}}-p-{{$item->id}}.html" title="{{$item->title}}">
+                        <a href="/san-pham/{{$item->slug}}.html" title="{{$item->title}}">
                             <img alt="{{$item->title}}" data-reg="true" class="imgLoopItem" src="<?php echo Helpers::get_bp_image($item->image, 'tmp') ?>" style="width: auto;">
                         </a>
                         <ul class="link-quickview">
-                            <li><a href="/{{$item->slug}}-p-{{$item->id}}.html" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
+                            <li><a href="/san-pham/{{$item->slug}}.html" title="Xem chi tiết"><i class="fa fa-exchange"></i></a></li>
                             <li><a href="javascript:void(0)" title="Xem nhanh" data-handle="{{$item->id}}" class="mask-view btn-quickview-1"><i class="fa fa-eye"></i></a></li>
                         </ul>
 
 
                     </div>
                     <div class="pdLoopDetail text-center clearfix">
-                        <h3 class="pdLoopName"><a class="productName" href="/{{$item->slug}}-p-{{$item->id}}.html" title="{{$item->title}}">{{$item->title}} </a></h3>
+                        <h3 class="pdLoopName"><a class="productName" href="/san-pham/{{$item->slug}}.html" title="{{$item->title}}">{{$item->title}} </a></h3>
                         <p class="pdPrice">
                             <span>{{number_format($item->promotion == 1 ? $item->price_promotion : $item->price)}}₫</span>
                         </p>
