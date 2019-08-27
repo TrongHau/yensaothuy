@@ -1,5 +1,4 @@
 <header id="header2" class="header2 ">
-    <div class="btn-top-header"><i class="fa fa-ellipsis-v"></i></div>
     <div class="top-header-v2">
         <div class="container">
             <div class="right-th-v2 hidden-xs hidden-sm">
