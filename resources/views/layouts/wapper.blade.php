@@ -6,7 +6,7 @@
                 <ul class="lag-v2 ">
 
                     <li>
-                        <a href="#1" target="_blank" class="login-link topbar-link">
+                        <a href="https://www.facebook.com/YensaoNhaTranggiagoc/" target="_blank" class="login-link topbar-link">
                             <i class="fa fa-facebook"></i>
                         </a>
                     </li>
