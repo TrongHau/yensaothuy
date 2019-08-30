@@ -1,6 +1,6 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
-    <link rel="shortcut icon" href="/image/favicon7d0b.png?v=140" type="image/png" />
+    <link rel="shortcut icon" href="/image/favicon.ico" type="image/png" />
     <meta charset="utf-8" />
     <meta name="revisit-after" content="1 day" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
