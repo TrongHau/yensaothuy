@@ -1,7 +1,7 @@
 <footer id="footer2" class="footer2">
 
 
-    <a href="/"><img src="/image/logo.png" style="height: 60px;" alt=""></a>
+    <a href="/"><img src="/image/logo2.png" style="height: 60px;" alt=""></a>
 
     <ul class="menu-footer">
 
