@@ -48,9 +48,9 @@
         <div class="container">
             <div id="search" class="search"><i class="fa fa-search"></i></div>
 
-            <a class="logo" href="/"><img src="/image/logo.png" style="height: 60px!important;" alt=""></a>
+            <a class="logo" href="/"><img src="/image/logo2.png" style="height: 60px!important;" alt=""></a>
             <h1 class="hide">
-                Vegetables-TMT
+                Yến Sào Thủy
             </h1>
         </div>
     </div>

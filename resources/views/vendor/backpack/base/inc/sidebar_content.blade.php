@@ -6,7 +6,6 @@
 <li><a href="{{backpack_url('article') }}"><i class="fa fa-paper-plane"></i> <span>Tin tức</span></a></li>
 <li><a href="{{backpack_url('category') }}"><i class="fa fa-list"></i> <span>Danh mục tin tức</span></a></li>
 <li><a href="{{backpack_url('page') }}"><i class="fa fa-file"></i> <span>Dịch vụ</span></a></li>
-<li><a href="{{backpack_url('contact') }}"><i class="fa fa-volume-control-phone"></i> <span>Liên hệ</span></a></li>
 <li><a href="{{backpack_url('slider_home_show1') }}"><i class="fa fa-sliders"></i> <span>Ảnh trình diễn 1</span></a></li>
 <li><a href="{{backpack_url('slider_home_show2') }}"><i class="fa fa-sliders"></i> <span>Ảnh trình diễn 2</span></a></li>
 <li><a href="{{backpack_url('slider_home_show3') }}"><i class="fa fa-sliders"></i> <span>Ảnh trình diễn 3</span></a></li>

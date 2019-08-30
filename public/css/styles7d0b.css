@@ -6645,21 +6645,21 @@ ul.product-list.view_list li.item_product .chir_loop .product_view_list {
 .banner-h1 .part-bn .caption-bn1 span {
 	font-size: 24px;
 	font-family: "'Playfair Display', serif";
-	color: #111;
+	color: #fff;
 	font-style: italic;
 }
 .banner-h1 .part-bn .caption-bn1 h3 {
 	font-size: 50px;
 	font-family: "'Playfair Display', serif";
-	color: #000;
+	color: #fff;
 }
 .banner-h1 .part-bn .caption-bn1 h3 b {
 	color: #f34040;
 }
 .banner-h1 .part-bn .caption-bn1 a {
-	color: #1c1c1c;
 	font-size: 16px;
 	text-decoration: none;
+	color: #fff;
 }
 .banner-h1 .part-bn .caption-bn2 {
 	position: absolute;
@@ -6927,7 +6927,7 @@ transition: all .3s;
 }
 .box-do .content-box-do h3 {
 	font-size: 22px;
-	color: #000;
+	color: #fff;
 	margin: 0;
 	margin-bottom: 15px;
 	transition: all .3s;
