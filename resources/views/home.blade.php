@@ -1,6 +1,7 @@
 <?php
 use App\Library\Helpers;
 use Jenssegers\Agent\Agent;
+$titleMeta = 'Yến Sào Thủy';
 ?>
 
 @section('meta')
