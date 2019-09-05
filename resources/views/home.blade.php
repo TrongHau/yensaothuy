@@ -179,7 +179,7 @@ Yến Trắng Rút Lông, Yến Chân Rút Lông, Yến Hồng Huyết Tinh Ch�
                     <div class="item-shipping">
                         <img src="/image/icon-h1-17d0b.png?v=140" alt="">
                         <span>Giao hàng </span>
-                        <p>Free cho đơn hàng trên 200k </p>
+                        <p>Free ship cho đơn hàng trên 1,500,000đ </p>
                     </div>
                     <div class="item-shipping">
                         <img src="/image/icon-h1-27d0b.png?v=140" alt="">
