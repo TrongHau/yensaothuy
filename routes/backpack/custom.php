@@ -25,36 +25,5 @@ Route::group([
     CRUD::resource('slider_home_show2', 'HomeSliderShow2Controller');
     CRUD::resource('slider_home_show3', 'HomeSliderShow3Controller');
 
-    // lấy tin batdongsan.com.vn
-
-    Route::get('sync_article_for_lease/sync_article_for_lease', 'SyncArticleForLeaseController@getSyncArticle');
-    Route::get('sync_article_for_lease/approval/{id}', 'SyncArticleForLeaseController@approvalSyncArticle');
-    Route::post('sync_article_for_lease/sync_post_article', 'SyncArticleForLeaseController@storeSyncArticle');
-
-    CRUD::resource('sync_article_for_lease', 'SyncArticleForLeaseController');
-
-    Route::get('sync_article_for_buy/sync_article_for_buy', 'SyncArticleForBuyController@getSyncArticle');
-    Route::get('sync_article_for_buy/approval/{id}', 'SyncArticleForBuyController@approvalSyncArticle');
-    Route::post('sync_article_for_buy/sync_post_article', 'SyncArticleForBuyController@storeSyncArticle');
-
-    CRUD::resource('sync_article_for_buy', 'SyncArticleForBuyController');
-
-    // lấy tin mua chotot.com
-
-    Route::get('sync_chotot_article_for_lease/sync_article_for_lease', 'SyncArticleForLeaseChototController@getSyncArticle');
-    Route::get('sync_chotot_article_for_lease/approval/{id}', 'SyncArticleForLeaseChototController@approvalSyncArticle');
-    Route::post('sync_chotot_article_for_lease/sync_post_article', 'SyncArticleForLeaseChototController@storeSyncArticle');
-
-    CRUD::resource('sync_chotot_article_for_lease', 'SyncArticleForLeaseChototController');
-
-
-    // lấy tin ban chotot.com
-
-    Route::get('sync_chotot_article_for_buy/sync_article_for_buy', 'SyncArticleForBuyChototController@getSyncArticle');
-    Route::get('sync_chotot_article_for_buy/approval/{id}', 'SyncArticleForBuyChototController@approvalSyncArticle');
-    Route::post('sync_chotot_article_for_buy/sync_post_article', 'SyncArticleForBuyChototController@storeSyncArticle');
-
-    CRUD::resource('sync_chotot_article_for_buy', 'SyncArticleForBuyChototController');
-
 
 }); // this should be the absolute last line of this file

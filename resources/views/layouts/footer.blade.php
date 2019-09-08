@@ -12,6 +12,8 @@
 
         <li><a href="/dieu-khoan-dich-vu.html">Điều khoản dịch vụ</a></li>
 
+        <li><a href="/huong-dan-mua-hang.html">Hướng dẫn mua hàng</a></li>
+
         <li><a href="/lien-he.html">Liên Hệ</a></li>
 
     </ul>
