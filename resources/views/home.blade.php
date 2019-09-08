@@ -69,7 +69,7 @@ Yến Trắng Rút Lông, Yến Chân Rút Lông, Yến Hồng Huyết Tinh Ch�
                         <div class="item-os">
                             <img src="/image/icon-bp-27d0b.jpg?v=140" alt="Công thức nấu ăn lành mạnh">
                             <h4>Sở Y Tế Khánh Hoà cấp chứng nhận</h4>
-                            <p>Quy trình sản xuất Tổ Yến đủ tiêu chuẩn chất lượng vệ sinh an toàn thực phẩm của Sở Y Tế Khánh Hoà.</p>
+                            <p>Quy trình sản xuất Tổ Yến đủ tiêu chuẩn chất lượng Vệ Sinh An Toàn Thực Phẩm của Sở Y Tế Khánh Hoà.</p>
                         </div>
 
 
@@ -80,7 +80,7 @@ Yến Trắng Rút Lông, Yến Chân Rút Lông, Yến Hồng Huyết Tinh Ch�
                         <div class="item-os">
                             <img src="/image/icon-bp-37d0b.jpg?v=140" alt="Chế độ ăn uống lành mạnh">
                             <h4>Sản phẩm đa dạng</h4>
-                            <p>Đáp ứng nhiều cho nhiều đối tượng và mục đích khác nhau mà chúng tôi tạo ra 12 dòng sản phẩm Yến Sào với nhiều đặc điểm riêng nổi bật của mỗi loại.</p>
+                            <p>Để đáp ứng cho nhiều đối tượng và mục đích sử dụng khác nhau mà chúng tôi tạo ra 12 dòng sản phẩm Yến Sào với nhiều đặc điểm riêng nổi bật của mỗi loại.</p>
                         </div>
 
 

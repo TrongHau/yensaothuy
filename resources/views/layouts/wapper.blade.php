@@ -26,12 +26,11 @@
                     {{--</li>--}}
 
 
-                    {{--<li>--}}
-                        {{--<a href="#3" target="_blank" class="login-link topbar-link" title="">--}}
-                            {{--<i class="fa fa-youtube"></i>--}}
-                        {{--</a>--}}
-                    {{--</li>--}}
-
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC5_3RHcRRZJqQkWSAmErQaA" target="_blank" class="login-link topbar-link" title="">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </li>
 
                     {{--<li>--}}
                         {{--<a href="" target="_blank" class="login-link topbar-link" title="">--}}
