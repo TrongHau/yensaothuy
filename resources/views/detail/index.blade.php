@@ -3,7 +3,7 @@ use App\Library\Helpers;
 use Jenssegers\Agent\Agent;
 $img_f = Helpers::get_bp_image($prod->image, 'tmp');
 $imgs_prod = [$img_f];
-if($prod->gallery_image) {
+if($prod->gallery_image && $prod->gallery_image != null) {
     foreach (json_decode($prod->gallery_image) as $item) {
         $imgs_prod[] = Helpers::get_bp_image($item, 'tmp');
     }
