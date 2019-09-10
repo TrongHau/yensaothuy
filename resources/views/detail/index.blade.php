@@ -1,6 +1,7 @@
 <?php
 use App\Library\Helpers;
 use Jenssegers\Agent\Agent;
+$Agent = new Agent();
 $img_f = Helpers::get_bp_image($prod->image, 'tmp');
 $imgs_prod = [$img_f];
 if($prod->gallery_image && $prod->gallery_image != null) {
@@ -404,5 +405,8 @@ Yến Trắng Rút Lông, Yến Chân Rút Lông, Yến Hồng Huyết Tinh Ch�
             quickViewProduct($(this).attr('data-handle'));
         })
     </script>
+    @if(!$Agent->isMobile())
+        <script src='/js/jquery.elevatezoom7d0b.js?v=140' type='text/javascript'></script>
+    @endif
 @endsection
 

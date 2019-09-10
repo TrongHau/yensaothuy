@@ -25,7 +25,6 @@
 <script src='/js/jquery.magnific-popup7d0b.js?v=140' type='text/javascript'></script>
 <script src='/js/jquery-ui7d0b.js?v=140' type='text/javascript'></script>
 <script src='/js/jquery.flexslider7d0b.js?v=140' type='text/javascript'></script>
-<script src='/js/jquery.elevatezoom7d0b.js?v=140' type='text/javascript'></script>
 {{--<script src='/js/option_selection.js' type='text/javascript'></script>--}}
 {{--<script src='/js/api.jquery.js' type='text/javascript'></script>--}}
 <script src='/js/bootstrap.min7d0b.js?v=140' type='text/javascript'></script>
