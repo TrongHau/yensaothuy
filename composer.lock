@@ -224,9 +224,9 @@
             "authors": [
                 {
                     "name": "Cristian Tabacitu",
-                    "role": "Chief Architect & Developer",
                     "email": "hello@tabacitu.ro",
-                    "homepage": "http://www.tabacitu.ro"
+                    "homepage": "http://www.tabacitu.ro",
+                    "role": "Chief Architect & Developer"
                 }
             ],
             "description": "Laravel Backpack's base package, which offers admin authentication and a blank admin panel using AdminLTE",
@@ -235,6 +235,7 @@
                 "backpack",
                 "base"
             ],
+            "abandoned": "backpack/crud",
             "time": "2018-12-10T08:23:26+00:00"
         },
         {
@@ -291,9 +292,9 @@
             "authors": [
                 {
                     "name": "Cristian Tabacitu",
-                    "role": "Chief Architect & Lead Developer",
                     "email": "hello@tabacitu.ro",
-                    "homepage": "http://www.tabacitu.ro"
+                    "homepage": "http://www.tabacitu.ro",
+                    "role": "Chief Architect & Lead Developer"
                 }
             ],
             "description": "Quickly build an admin interface for your Eloquent models, using Laravel 5. Build a CMS in a matter of minutes.",
@@ -356,14 +357,14 @@
             "authors": [
                 {
                     "name": "Alin Ghitu",
-                    "role": "Lead Developer",
-                    "email": "alin@updivision.com"
+                    "email": "alin@updivision.com",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Cristian Tabacitu",
-                    "role": "Contributor",
                     "email": "hello@tabacitu.ro",
-                    "homepage": "http://www.tabacitu.ro"
+                    "homepage": "http://www.tabacitu.ro",
+                    "role": "Contributor"
                 }
             ],
             "description": "An interface to edit language files, for Laravel Backpack.",
@@ -432,9 +433,9 @@
             "authors": [
                 {
                     "name": "Cristian Tabacitu",
-                    "role": "Developer",
                     "email": "hello@tabacitu.ro",
-                    "homepage": "http://tabacitu.ro"
+                    "homepage": "http://tabacitu.ro",
+                    "role": "Developer"
                 }
             ],
             "description": "An interface to preview, download and delete Laravel log files.",
@@ -555,9 +556,9 @@
             "authors": [
                 {
                     "name": "Cristian Tabacitu",
-                    "role": "Developer",
                     "email": "hello@tabacitu.ro",
-                    "homepage": "http://tabacitu.ro"
+                    "homepage": "http://tabacitu.ro",
+                    "role": "Developer"
                 }
             ],
             "description": "An admin panel for news with categories and tags, using Backpack\\CRUD on Laravel 5.",
@@ -617,9 +618,9 @@
             "authors": [
                 {
                     "name": "Cristian Tabacitu",
-                    "role": "Architect & Developer",
                     "email": "hello@tabacitu.ro",
-                    "homepage": "http://tabacitu.ro"
+                    "homepage": "http://tabacitu.ro",
+                    "role": "Architect & Developer"
                 }
             ],
             "description": "Create admin panels for presentation websites on Laravel, using page templates and Backpack\\CRUD.",
@@ -758,9 +759,9 @@
             "authors": [
                 {
                     "name": "Cristian Tabacitu",
-                    "role": "Chief Architect & Lead Developer",
                     "email": "hello@tabacitu.ro",
-                    "homepage": "http://www.tabacitu.ro"
+                    "homepage": "http://www.tabacitu.ro",
+                    "role": "Chief Architect & Lead Developer"
                 }
             ],
             "description": "Application settings interface for Laravel 5 using Backpack CRUD.",
@@ -1119,9 +1120,9 @@
             "authors": [
                 {
                     "name": "Jaco Tijssen",
-                    "role": "Developer",
                     "email": "jaco@creativeorange.nl",
-                    "homepage": "https://www.creativeorange.nl"
+                    "homepage": "https://www.creativeorange.nl",
+                    "role": "Developer"
                 }
             ],
             "description": "Gravatar for Laravel 5.0.x through 5.5.x package for retrieving gravatar image URLs or checking the existance of an image.",
@@ -2097,6 +2098,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -2143,6 +2145,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
@@ -2179,8 +2182,8 @@
             "authors": [
                 {
                     "name": "Mark Beech",
-                    "role": "Developer",
-                    "email": "m@rkbee.ch"
+                    "email": "m@rkbee.ch",
+                    "role": "Developer"
                 }
             ],
             "description": "CrawlerDetect is a PHP class for detecting bots/crawlers/spiders via the user agent",
@@ -2708,31 +2711,31 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.53",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "08e12b7628f035600634a5e76d95b5eb66cea674"
+                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/08e12b7628f035600634a5e76d95b5eb66cea674",
-                "reference": "08e12b7628f035600634a5e76d95b5eb66cea674",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
+                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
                 "shasum": ""
             },
             "require": {
                 "ext-fileinfo": "*",
-                "php": ">=5.5.9"
+                "league/mime-type-detection": "^1.3",
+                "php": "^7.2.5 || ^8.0"
             },
             "conflict": {
                 "league/flysystem-sftp": "<1.0.6"
             },
             "require-dev": {
-                "phpspec/phpspec": "^3.4",
-                "phpunit/phpunit": "^5.7.10"
+                "phpspec/prophecy": "^1.11.1",
+                "phpunit/phpunit": "^8.5.8"
             },
             "suggest": {
-                "ext-fileinfo": "Required for MimeType",
                 "ext-ftp": "Allows you to use FTP server storage",
                 "ext-openssl": "Allows you to use FTPS server storage",
                 "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
@@ -2788,7 +2791,13 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-06-18T20:09:29+00:00"
+            "funding": [
+                {
+                    "url": "https://offset.earth/frankdejonge",
+                    "type": "other"
+                }
+            ],
+            "time": "2021-06-23T21:56:05+00:00"
         },
         {
             "name": "league/flysystem-cached-adapter",
@@ -2836,6 +2845,58 @@
             ],
             "description": "An adapter decorator to enable meta-data caching.",
             "time": "2018-07-09T20:51:04+00:00"
+        },
+        {
+            "name": "league/mime-type-detection",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/mime-type-detection.git",
+                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
+                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.18",
+                "phpstan/phpstan": "^0.12.68",
+                "phpunit/phpunit": "^8.5.8 || ^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\MimeTypeDetection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frankdejonge.nl"
+                }
+            ],
+            "description": "Mime-type detection for Flysystem",
+            "funding": [
+                {
+                    "url": "https://github.com/frankdejonge",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/league/flysystem",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-18T20:58:21+00:00"
         },
         {
             "name": "league/oauth1-client",
@@ -2936,9 +2997,9 @@
             "authors": [
                 {
                     "name": "Serban Ghita",
-                    "role": "Developer",
                     "email": "serbanghita@gmail.com",
-                    "homepage": "http://mobiledetect.net"
+                    "homepage": "http://mobiledetect.net",
+                    "role": "Developer"
                 }
             ],
             "description": "Mobile_Detect is a lightweight PHP class for detecting mobile devices. It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.",
@@ -3229,9 +3290,9 @@
             "authors": [
                 {
                     "name": "Dries Vints",
-                    "role": "Maintainer",
                     "email": "dries.vints@gmail.com",
-                    "homepage": "http://driesvints.com"
+                    "homepage": "http://driesvints.com",
+                    "role": "Maintainer"
                 }
             ],
             "description": "Prologue Alerts is a package that handles global site messages.",
@@ -3656,17 +3717,17 @@
             ],
             "authors": [
                 {
+                    "name": "Ben Ramsey",
+                    "email": "ben@benramsey.com",
+                    "homepage": "https://benramsey.com"
+                },
+                {
                     "name": "Marijn Huizendveld",
                     "email": "marijn.huizendveld@gmail.com"
                 },
                 {
                     "name": "Thibaud Fabre",
                     "email": "thibaud@aztech.io"
-                },
-                {
-                    "name": "Ben Ramsey",
-                    "email": "ben@benramsey.com",
-                    "homepage": "https://benramsey.com"
                 }
             ],
             "description": "Formerly rhumsaa/uuid. A PHP 5.4+ library for generating RFC 4122 version 1, 3, 4, and 5 universally unique identifiers (UUID).",
@@ -3712,9 +3773,9 @@
             "authors": [
                 {
                     "name": "Freek Van der Herten",
-                    "role": "Developer",
                     "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be"
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
                 }
             ],
             "description": "Dump databases",
@@ -3786,9 +3847,9 @@
             "authors": [
                 {
                     "name": "Freek Van der Herten",
-                    "role": "Developer",
                     "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be"
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
                 }
             ],
             "description": "A Laravel 5 package to backup your application",
@@ -3844,9 +3905,9 @@
             "authors": [
                 {
                     "name": "Freek Van der Herten",
-                    "role": "Developer",
                     "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be"
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
                 }
             ],
             "description": "Permission handling for Laravel 5.1 and up",
@@ -3893,9 +3954,9 @@
             "authors": [
                 {
                     "name": "Alex Vanderbist",
-                    "role": "Developer",
                     "email": "alex@spatie.be",
-                    "homepage": "https://spatie.be"
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
                 }
             ],
             "description": "Easily create, use and destroy temporary directories",
@@ -5374,6 +5435,7 @@
                 }
             ],
             "description": "A simple eloquent trait that allows relationships to be accessed through child models.",
+            "abandoned": "calebporzio/parental",
             "time": "2018-09-06T13:02:30+00:00"
         },
         {
@@ -5641,9 +5703,9 @@
             "authors": [
                 {
                     "name": "Cristian Tone",
-                    "role": "Developer",
                     "email": "cristitone@outlook.com",
-                    "homepage": "http://updivision.com"
+                    "homepage": "http://updivision.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Generate files for laravel projects",
@@ -5758,8 +5820,8 @@
             "authors": [
                 {
                     "name": "Filipe Dobreira",
-                    "role": "Developer",
-                    "homepage": "https://github.com/filp"
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
                 }
             ],
             "description": "php error handling for cool kids",
@@ -5822,6 +5884,7 @@
                 "faker",
                 "fixtures"
             ],
+            "abandoned": true,
             "time": "2018-07-12T10:23:15+00:00"
         },
         {
@@ -6600,6 +6663,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2017-11-27T05:48:46+00:00"
         },
         {
@@ -6673,8 +6737,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
                 }
             ],
             "description": "The PHP Unit Testing framework.",
@@ -6743,6 +6807,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2018-08-09T05:50:03+00:00"
         },
         {
@@ -7337,8 +7402,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "role": "Developer",
-                    "email": "arne@blankerts.de"
+                    "email": "arne@blankerts.de",
+                    "role": "Developer"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
@@ -7349,12 +7414,12 @@
             "version": "1.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/83e253c8e0be5b0257b881e1827274667c5c17a9",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/83e253c8e0be5b0257b881e1827274667c5c17a9",
                 "reference": "83e253c8e0be5b0257b881e1827274667c5c17a9",
                 "shasum": ""
             },
@@ -7407,5 +7472,6 @@
     "platform": {
         "php": ">=7.0.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
